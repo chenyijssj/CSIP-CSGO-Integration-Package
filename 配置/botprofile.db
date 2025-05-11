@@ -1,0 +1,6489 @@
+//----------------------------------------------------------------------------
+// BotProfile.db
+// Author: Michael S. Booth, Turtle Rock Studios (www.turtlerockstudios.com)
+//
+// This database defines bot "personalities". 
+// Feel free to edit it and define your own bots.
+//
+
+
+//----------------------------------------------------------------------------
+
+//
+// All profiles begin with this data and overwrite their own
+//
+Default
+	Skill = 100
+	Aggression = 100
+	ReactionTime = 0.01
+	AttackDelay = 0
+	Teamwork = 75
+	AimFocusInitial = 0			// initial focus spread in degrees (from desired center)
+	AimFocusDecay = 0				// how much focus shrinks per second (.25 = 25% of size after 1 sec)
+	AimFocusOffsetScale = 0		// controls accuracy when tracking to target (0 == perfect, should always be < 1)
+	AimfocusInterval = 0			// how often focus is adjusted (smaller intervals means better movement tracking)
+	WeaponPreference = none
+	Cost = 5
+	Difficulty = EXPERT
+	VoicePitch = 100
+	Skin = 0
+	LookAngleMaxAccelNormal = 7000.0
+	LookAngleStiffnessNormal = 700.0
+	LookAngleDampingNormal = 50.0
+	LookAngleMaxAccelAttacking = 7000.0
+	LookAngleStiffnessAttacking = 2000.0
+	LookAngleDampingAttacking = 40.0
+End
+
+//----------------------------------------------------------------------------
+
+//
+// These templates inherit from Default and override with their values
+// The name of the template defines a type that is used by individual bot profiles
+//
+
+// weapon preference templates
+Template Almighty
+	Skill = 49
+	Cost = 8
+End
+
+Template Rifle
+	WeaponPreference = xm1014
+	WeaponPreference = mag7
+	WeaponPreference = sawedoff
+	WeaponPreference = nova
+	Skill = 49
+End
+
+Template RifleT
+	WeaponPreference = awp
+	WeaponPreference = fn57
+	WeaponPreference = tec9
+	WeaponPreference = cz75a
+	WeaponPreference = usp_silencer
+	WeaponPreference = xm1014
+	WeaponPreference = mag7
+	Skill = 49
+End
+
+Template RifleD
+	WeaponPreference = nova
+	WeaponPreference = awp
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	Skill = 49
+End
+
+Template RifleE
+	WeaponPreference = mag7
+	WeaponPreference = sawedoff
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = xm1014
+	WeaponPreference = nova
+	Skill = 49
+End
+
+Template RifleM
+	WeaponPreference = sawedoff
+	WeaponPreference = mag7
+	WeaponPreference = awp
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = xm1014
+	WeaponPreference = nova
+	Skill = 49
+End
+
+Template Punch
+	WeaponPreference = xm1014
+	WeaponPreference = mag7
+	WeaponPreference = sawedoff
+	WeaponPreference = nova
+	Skill = 49
+End
+
+Template PunchT
+	WeaponPreference = awp
+	WeaponPreference = fn57
+	WeaponPreference = tec9
+	WeaponPreference = cz75a
+	WeaponPreference = usp_silencer
+	WeaponPreference = xm1014
+	WeaponPreference = mag7
+	Skill = 49
+End
+
+Template Sniper
+	WeaponPreference = nova
+	WeaponPreference = awp
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = xm1014
+	WeaponPreference = mag7
+	Skill = 49
+End
+
+Template SniperD
+	WeaponPreference = mag7
+	WeaponPreference = sawedoff
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = xm1014
+	WeaponPreference = nova
+	Skill = 49
+End
+
+Template Shooter
+	WeaponPreference = sawedoff
+	WeaponPreference = mag7
+	WeaponPreference = awp
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = xm1014
+	WeaponPreference = nova
+	Skill = 49
+End
+
+Template Power
+	WeaponPreference = xm1014
+	WeaponPreference = mag7
+	WeaponPreference = sawedoff
+	WeaponPreference = nova
+	Skill = 49
+End
+
+Template PowerS
+	WeaponPreference = awp
+	WeaponPreference = fn57
+	WeaponPreference = tec9
+	WeaponPreference = cz75a
+	WeaponPreference = usp_silencer
+	WeaponPreference = xm1014
+	WeaponPreference = mag7
+	Skill = 49
+End
+
+Template Shotgun
+	WeaponPreference = nova
+	WeaponPreference = awp
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = xm1014
+	WeaponPreference = mag7
+	Skill = 49
+End
+
+Template Boomer
+	WeaponPreference = mag7
+	WeaponPreference = sawedoff
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = xm1014
+	WeaponPreference = nova
+	Skill = 49
+End
+
+Template Spray
+	WeaponPreference = sawedoff
+	WeaponPreference = mag7
+	WeaponPreference = awp
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = xm1014
+	WeaponPreference = nova
+	Skill = 49
+End
+
+Template HunterT
+	WeaponPreference = xm1014
+	WeaponPreference = mag7
+	WeaponPreference = sawedoff
+	WeaponPreference = nova
+	Skill = 49
+End
+
+Template Hunter
+	WeaponPreference = awp
+	WeaponPreference = fn57
+	WeaponPreference = tec9
+	WeaponPreference = cz75a
+	WeaponPreference = usp_silencer
+	WeaponPreference = xm1014
+	WeaponPreference = mag7
+	Skill = 49
+End
+
+Template HunterS
+	WeaponPreference = nova
+	WeaponPreference = awp
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = xm1014
+	WeaponPreference = mag7
+	Skill = 49
+End
+
+Template HunterN
+	WeaponPreference = sawedoff
+	WeaponPreference = mag7
+	WeaponPreference = awp
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = xm1014
+	WeaponPreference = nova
+	Skill = 49
+End
+
+Template HunterE
+	WeaponPreference = mag7
+	WeaponPreference = sawedoff
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = xm1014
+	WeaponPreference = nova
+	Skill = 49
+End
+
+Template Eco
+	WeaponPreference = xm1014
+	WeaponPreference = mag7
+	WeaponPreference = sawedoff
+	WeaponPreference = nova
+	Skill = 49
+End
+
+Template EcoT
+	WeaponPreference = awp
+	WeaponPreference = fn57
+	WeaponPreference = tec9
+	WeaponPreference = cz75a
+	WeaponPreference = usp_silencer
+	WeaponPreference = xm1014
+	WeaponPreference = mag7
+	Skill = 49
+End
+
+Template EcoD
+	WeaponPreference = nova
+	WeaponPreference = awp
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = xm1014
+	WeaponPreference = mag7
+	Skill = 49
+End
+
+Template Precise
+	WeaponPreference = sawedoff
+	WeaponPreference = mag7
+	WeaponPreference = awp
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = xm1014
+	WeaponPreference = nova
+	Skill = 49
+End
+
+Template Freeman
+	WeaponPreference = mag7
+	WeaponPreference = sawedoff
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = xm1014
+	WeaponPreference = nova
+	Skill = 49
+End
+
+Template PunchD
+	WeaponPreference = xm1014
+	WeaponPreference = mag7
+	WeaponPreference = sawedoff
+	WeaponPreference = nova
+	Skill = 49
+End
+
+Template PunchR
+	WeaponPreference = awp
+	WeaponPreference = fn57
+	WeaponPreference = tec9
+	WeaponPreference = cz75a
+	WeaponPreference = usp_silencer
+	WeaponPreference = xm1014
+	WeaponPreference = mag7
+	Skill = 49
+End
+
+Template Rusher
+	WeaponPreference = nova
+	WeaponPreference = awp
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = xm1014
+	WeaponPreference = mag7
+	Skill = 49
+End
+
+Template Tank
+	WeaponPreference = sawedoff
+	WeaponPreference = mag7
+	WeaponPreference = awp
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = xm1014
+	WeaponPreference = nova
+	Skill = 49
+End
+
+Template Autosniper
+	WeaponPreference = mag7
+	WeaponPreference = sawedoff
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = xm1014
+	WeaponPreference = nova
+	Skill = 49
+End
+
+Template Noober
+	WeaponPreference = xm1014
+	WeaponPreference = mag7
+	WeaponPreference = sawedoff
+	WeaponPreference = nova
+	Skill = 49
+End
+
+Template Player1
+	WeaponPreference = awp
+	WeaponPreference = fn57
+	WeaponPreference = tec9
+	WeaponPreference = cz75a
+	WeaponPreference = usp_silencer
+	WeaponPreference = xm1014
+	WeaponPreference = mag7
+	Skill = 49
+End
+
+Template Player2
+	WeaponPreference = nova
+	WeaponPreference = awp
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = xm1014
+	WeaponPreference = mag7
+	Skill = 49
+End
+
+Template Player3
+	WeaponPreference = sawedoff
+	WeaponPreference = awp
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = xm1014
+	WeaponPreference = nova
+	Skill = 49
+End
+
+Template Player4
+	WeaponPreference = mag7
+	WeaponPreference = sawedoff
+	WeaponPreference = m4a1
+	WeaponPreference = ak47
+	WeaponPreference = xm1014
+	WeaponPreference = nova
+	Skill = 49
+End
+
+Template Player5
+	WeaponPreference = xm1014
+	WeaponPreference = mag7
+	WeaponPreference = sawedoff
+	WeaponPreference = nova
+	Skill = 49
+End
+
+
+// skill templates
+Template Legendary
+	Skill = 150
+	Rank = 1800
+	Aggression = 35
+	ReactionTime = 0
+	Cost = 5
+	Difficulty = HARD+EXPERT
+	VoicePitch = 80
+	AimFocusInitial = 0
+	AimFocusDecay = 0.001
+	AimFocusOffsetScale = 0
+	AimfocusInterval = 0
+End
+
+Template Elite
+	Skill = 100
+	Rank = 1800
+	Aggression = 35
+	ReactionTime = 0
+	AttackDelay = 0
+	Cost = 5
+	Difficulty = HARD+EXPERT
+	VoicePitch = 85
+	AimFocusInitial = 0
+	AimFocusDecay = 0.001
+	AimFocusOffsetScale = 0
+	AimfocusInterval = 0
+End
+
+Template Expert
+	Skill = 100
+	Rank = 1700
+	Aggression = 35
+	ReactionTime = 0
+	AttackDelay = 0
+	Cost = 5
+	Difficulty = HARD+EXPERT
+	VoicePitch = 88
+	AimFocusInitial = 0
+	AimFocusDecay = 0.001
+	AimFocusOffsetScale = 0
+	AimfocusInterval = 0
+End
+
+Template VeryHard
+	Skill = 100
+	Rank = 1400
+	Aggression = 40
+	ReactionTime = 0.2
+	Cost = 8
+	Difficulty = NORMAL+HARD
+	VoicePitch = 92
+	AimFocusInitial = 0.5
+	AimFocusDecay = 0.15
+	AimFocusOffsetScale = 0.05
+	AimfocusInterval = 0.05
+	LookAngleMaxAccelNormal = 6500.0
+	LookAngleStiffnessNormal = 650.0
+	LookAngleDampingNormal = 50.0
+	LookAngleMaxAccelAttacking = 6500.0
+	LookAngleStiffnessAttacking = 1500.0
+End
+
+Template Hard
+	Skill = 100
+	Rank = 1300
+	Aggression = 45
+	ReactionTime = 0.2
+	Cost = 8
+	Difficulty = NORMAL+HARD
+	VoicePitch = 94
+	AimFocusInitial = 0.55
+	AimFocusDecay = 0.23
+	AimFocusOffsetScale = 0.13
+	AimfocusInterval = 0.22
+	LookAngleMaxAccelNormal = 6400.0
+	LookAngleStiffnessNormal = 640.0
+	LookAngleDampingNormal = 50.0
+	LookAngleMaxAccelAttacking = 6400.0
+	LookAngleStiffnessAttacking = 1400.0
+End
+
+Template Tough
+	Skill = 100
+	Rank = 1200
+	Aggression = 25
+	ReactionTime = 0.25
+	AttackDelay = 0
+	Cost = 8
+	Difficulty = NORMAL+HARD
+	VoicePitch = 96
+	AimFocusInitial = 0.65
+	AimFocusDecay = 0.27
+	AimFocusOffsetScale = 0.15
+	AimfocusInterval = 0.28
+	LookAngleMaxAccelNormal = 6300.0
+	LookAngleStiffnessNormal = 630.0
+	LookAngleDampingNormal = 50.0
+	LookAngleMaxAccelAttacking = 6300.0
+	LookAngleStiffnessAttacking = 1300.0
+End
+
+Template Normal
+	Skill = 95
+	Rank = 1100
+	Aggression = 20
+	ReactionTime = 0.25
+	AttackDelay = 0
+	Cost = 8
+	Difficulty = EASY+NORMAL
+	VoicePitch = 100
+	AimFocusInitial = 0.7
+	AimFocusDecay = 0.25
+	AimFocusOffsetScale = 0.2
+	AimfocusInterval = 0.35
+	LookAngleMaxAccelNormal = 6200.0
+	LookAngleStiffnessNormal = 620.0
+	LookAngleDampingNormal = 50.0
+	LookAngleMaxAccelAttacking = 6200.0
+	LookAngleStiffnessAttacking = 1200.0
+End
+
+Template Fair
+	Skill = 90
+	Rank = 1000
+	Aggression = 15
+	ReactionTime = 0.25
+	AttackDelay = 0
+	Cost = 1
+	Difficulty = EASY+NORMAL
+	VoicePitch = 105
+	AimFocusInitial = 0.7
+	AimFocusDecay = 0.4
+	AimFocusOffsetScale = 0.2
+	AimfocusInterval = 0.4
+	LookAngleMaxAccelNormal = 6100.0
+	LookAngleStiffnessNormal = 610.0
+	LookAngleDampingNormal = 50.0
+	LookAngleMaxAccelAttacking = 6100.0
+	LookAngleStiffnessAttacking = 1100.0
+End
+
+Template Easy
+	Skill = 85
+	Rank = 1000
+	Aggression = 10
+	ReactionTime = 0.30
+	AttackDelay = 0
+	Cost = 1
+	Difficulty = EASY
+	VoicePitch = 110
+	AimFocusInitial = 0.75
+	AimFocusDecay = 0.45
+	AimFocusOffsetScale = 0.25
+	AimfocusInterval = 0.45
+	LookAngleMaxAccelNormal = 6000.0
+	LookAngleStiffnessNormal = 600.0
+	LookAngleDampingNormal = 50.0
+	LookAngleMaxAccelAttacking = 6000.0
+	LookAngleStiffnessAttacking = 1000.0
+End
+
+//----------------------------------------------------------------------------
+//
+// These are the individual bot profiles, which inherit first from 
+// Default and then the specified Template(s), in order
+//
+
+
+Legendary+EcoD "Na'Vi Aleksib"
+	Aggression = 30
+	Skin = 5
+	VoicePitch = 100
+End
+
+Legendary+RifleE "Heroic Jabbi"
+	Aggression = 45
+	Skin = 1
+	VoicePitch = 100
+End
+
+Legendary+PunchD "Vitality apEX"
+	Aggression = 55
+	Skin = 2
+	VoicePitch = 100
+End
+
+Legendary+HunterN "G2 HooXi"
+	Aggression = 45
+	Skin = 3
+	VoicePitch = 100
+End
+
+Legendary+EcoD "OG nexa"
+	Aggression = 65
+	Skin = 4
+	VoicePitch = 100
+End
+
+Legendary+SniperD "Liquid oSee"
+	Aggression = 30
+	Skin = 1
+	VoicePitch = 100
+End
+
+Legendary+Hunter "ENCE Snappi"
+	Aggression = 65
+	Skin = 2
+	VoicePitch = 100
+End
+
+Legendary+Freeman "ENCE maden"
+	Aggression = 25
+	Skin = 3
+	VoicePitch = 100
+End
+
+Legendary+RifleT "Nip k0nfig"
+	Aggression = 40
+	Skin = 4
+	VoicePitch = 100
+End
+
+Legendary+Power "Astralis Buzz"
+	Aggression = 30
+	Skin = 1
+	VoicePitch = 100
+End
+
+Legendary+RifleD "Astralis Steahr"
+	Aggression = 15
+	Skin = 2
+	VoicePitch = 100
+End
+
+Legendary+Freeman "Outsiders FL1T"
+	Aggression = 25
+	Skin = 3
+	VoicePitch = 100
+End
+
+Legendary+Eco "Outsiders fame"
+	Aggression = 30
+	Skin = 4
+	VoicePitch = 100
+End
+
+Legendary+RifleT "Outsiders KaiR0N-"
+	Aggression = 55
+	Skin = 1
+	VoicePitch = 100
+End
+
+Legendary+RifleE "FURIA chelo"
+	Aggression = 80
+	Skin = 2
+	VoicePitch = 100
+End
+
+Legendary+Eco "BIG prosus"
+	Aggression = 25
+	Skin = 3
+	VoicePitch = 100
+End
+
+Legendary+HunterT "MIBR insani"
+	Aggression = 75
+	Skin = 4
+	VoicePitch = 100
+End
+
+Legendary+Eco "MIBR drop"
+	Aggression = 45
+	Skin = 1
+	VoicePitch = 100
+End
+
+Legendary+Punch "Fluxo PKL"
+	Aggression = 20
+	Skin = 2
+	VoicePitch = 100
+End
+
+Legendary+HunterT "Fluxo t9rnay"
+	Aggression = 10
+	Skin = 3
+	VoicePitch = 100
+End
+
+Legendary+PowerS "Fluxo zevy"
+	Aggression = 35
+	Skin = 4
+	VoicePitch = 100
+End
+
+Legendary+RifleT "Fluxo v$m"
+	Aggression = 25
+	Skin = 1
+	VoicePitch = 100
+End
+
+Legendary+HunterN "MOUZ siuhy"
+	Aggression = 35
+	Skin = 2
+	VoicePitch = 100
+End
+
+Legendary+EcoT "MOUZ Jimpphat"
+	Aggression = 30
+	Skin = 3
+	VoicePitch = 100
+End
+
+Legendary+Freeman "Spirit magixx"
+	Aggression = 35
+	Skin = 4
+	VoicePitch = 100
+End
+
+Legendary+Rifle "Spirit chopper"
+	Aggression = 65
+	Skin = 1
+	VoicePitch = 100
+End
+
+Legendary+Shooter "Spirit ArtFr0st"
+	Aggression = 20
+	Skin = 2
+	VoicePitch = 100
+End
+
+Legendary+RifleT "Spirit donk"
+	Aggression = 15
+	Skin = 3
+	VoicePitch = 100
+End
+
+Legendary+PunchD "COL Grim"
+	Aggression = 40
+	Skin = 4
+	VoicePitch = 100
+End
+
+Legendary+Spray "COL hallzerk"
+	Aggression = 25
+	Skin = 1
+	VoicePitch = 100
+End
+
+Legendary+Spray "EG autimatic"
+	Aggression = 30
+	Skin = 2
+	VoicePitch = 100
+End
+
+Legendary+Freeman "EG Walco"
+	Aggression = 25
+	Skin = 3
+	VoicePitch = 100
+End
+
+Legendary+Power "EG Jeorge"
+	Aggression = 45
+	Skin = 4
+	VoicePitch = 100
+End
+
+Legendary+Punch "MRS ALEX"
+	Aggression = 45
+	Skin = 1
+	VoicePitch = 100
+End
+
+Legendary+RifleT "MRS dav1g"
+	Aggression = 30
+	Skin = 2
+	VoicePitch = 100
+End
+
+Legendary+SniperD "MRS Martinez"
+	Aggression = 20
+	Skin = 3
+	VoicePitch = 100
+End
+
+Legendary+HunterT "MRS JUST"
+	Aggression = 35
+	Skin = 4
+	VoicePitch = 100
+End
+
+Legendary+Spray "00 nqz"
+	Aggression = 40
+	Skin = 1
+	VoicePitch = 100
+End
+
+Legendary+HunterN "00 dumau"
+	Aggression = 25
+	Skin = 2
+	VoicePitch = 100
+End
+
+Legendary+EcoT "FNC dexter"
+	Aggression = 15
+	Skin = 3
+	VoicePitch = 100
+End
+
+Legendary+PunchR "EF Wicadia"
+	Aggression = 70
+	Skin = 4
+	VoicePitch = 100
+End
+
+Legendary+Power "ITB NEOFRAG"
+	Aggression = 45
+	Skin = 1
+	VoicePitch = 100
+End
+
+Legendary+Rifle "ITB Thomas"
+	Aggression = 10
+	Skin = 2
+	VoicePitch = 100
+End
+
+Legendary+Shooter "Monte Woro2k"
+	Aggression = 5
+	Skin = 3
+	VoicePitch = 100
+End
+
+Legendary+PunchD "Monte br0"
+	Aggression = 25
+	Skin = 4
+	VoicePitch = 100
+End
+
+Legendary+RifleT "Monte kRaSnaL"
+	Aggression = 15
+	Skin = 1
+	VoicePitch = 100
+End
+
+Legendary+Tank "forZe r3salt"
+	Aggression = 70
+	Skin = 2
+	VoicePitch = 100
+End
+
+Legendary+EcoD "forZe sstiNiX"
+	Aggression = 30
+	Skin = 3
+	VoicePitch = 100
+End
+
+Legendary+Spray "forZe El1an"
+	Aggression = 15
+	Skin = 4
+	VoicePitch = 100
+End
+
+Legendary+Power "Apeks STYKO"
+	Aggression = 35
+	Skin = 1
+	VoicePitch = 100
+End
+
+Legendary+RifleE "Apeks kyxsan"
+	Aggression = 40
+	Skin = 2
+	VoicePitch = 100
+End
+
+Legendary+Power "Gray Liazz"
+	Aggression = 15
+	Skin = 3
+	VoicePitch = 100
+End
+
+Legendary+EcoD "Gray Vexite"
+	Aggression = 45
+	Skin = 4
+	VoicePitch = 100
+End
+
+Legendary+Eco "Imp VINI"
+	Aggression = 25
+	Skin = 1
+	VoicePitch = 100
+End
+
+Legendary+RifleT "Imp JOTA"
+	Aggression = 45
+	Skin = 2
+	VoicePitch = 100
+End
+
+Legendary+Shotgun "Imp HEN1"
+	Aggression = 35
+	Skin = 3
+	VoicePitch = 100
+End
+
+Legendary+PunchD "BNE rigoN"
+	Aggression = 35
+	Skin = 4
+	VoicePitch = 100
+End
+
+Legendary+Almighty "BNE sinnopsyy"
+	Aggression = 85
+	Skin = 1
+	VoicePitch = 100
+End
+
+Legendary+HunterN "9z dgt"
+	Aggression = 15
+	Skin = 2
+	VoicePitch = 100
+End
+
+Legendary+Power "9z max"
+	Aggression = 30
+	Skin = 3
+	VoicePitch = 100
+End
+
+Legendary+EcoT "1win TRAVIS"
+	Aggression = 50
+	Skin = 4
+	VoicePitch = 100
+End
+
+Legendary+Punch "1win NickelBack"
+	Aggression = 40
+	Skin = 1
+	VoicePitch = 100
+End
+
+
+//----------------------------------------
+
+Elite+SniperD "FaZe broky"
+	Aggression = 35
+	Skin = 3
+	VoicePitch = 100
+End
+
+Elite+HunterT "FaZe rain"
+	Aggression = 70
+	Skin = 4
+	VoicePitch = 100
+End
+
+Elite+RifleT "FaZe karrigan"
+	Aggression = 10
+	Skin = 5
+	VoicePitch = 100
+End
+
+Elite+HunterT "Na'Vi b1t"
+	Aggression = 25
+	Skin = 3
+	VoicePitch = 100
+End
+
+Elite+RifleM "Na'Vi iM"
+	Aggression = 60
+	Skin = 4
+	VoicePitch = 100
+End
+
+Elite+HunterT "Heroic stavn"
+	Aggression = 60
+	Skin = 3
+	VoicePitch = 100
+End
+
+Elite+Punch "Heroic TeSeS"
+	Aggression = 45
+	Skin = 4
+	VoicePitch = 100
+End
+
+Elite+Precise "Heroic cadiaN"
+	Aggression = 30
+	Skin = 1
+	VoicePitch = 100
+End
+
+Elite+Eco "Vitality Spinx"
+	Aggression = 25
+	Skin = 2
+	VoicePitch = 100
+End
+
+Elite+EcoD "Vitality flameZ"
+	Aggression = 65
+	Skin = 3
+	VoicePitch = 100
+End
+
+Elite+RifleT "G2 huNter-"
+	Aggression = 35
+	Skin = 4
+	VoicePitch = 100
+End
+
+Elite+HunterT "G2 jks"
+	Aggression = 20
+	Skin = 1
+	VoicePitch = 100
+End
+
+Elite+EcoD "OG F1KU"
+	Aggression = 25
+	Skin = 2
+	VoicePitch = 100
+End
+
+Elite+Freeman "OG k1to"
+	Aggression = 35
+	Skin = 3
+	VoicePitch = 100
+End
+
+Elite+RifleD "OG FASHR"
+	Aggression = 50 
+	Skin = 4
+	VoicePitch = 100
+End
+
+Elite+RifleT "Liquid Rainwaker"
+	Aggression = 35
+	Skin = 1
+	VoicePitch = 100
+End
+
+Elite+RifleT "Liquid Patsi"
+	Aggression = 20
+	Skin = 2
+	VoicePitch = 100
+End
+
+Elite+Spray "ENCE SunPayus"
+	Aggression = 55
+	Skin = 3
+	VoicePitch = 100
+End
+
+Elite+RifleT "ENCE dycha"
+	Aggression = 50
+	Skin = 4
+	VoicePitch = 100
+End
+
+Elite+RifleT "ENCE nertZ"
+	Aggression = 25
+	Skin = 1
+	VoicePitch = 100
+End
+
+Elite+EcoD "Nip REZ"
+	Aggression = 35
+	Skin = 2
+	VoicePitch = 100
+End
+
+Elite+HunterT "Nip hampus"
+	Aggression = 60
+	Skin = 3
+	VoicePitch = 100
+End
+
+Elite+RifleD "Astralis b0RUP"
+	Aggression = 35
+	Skin = 4
+	VoicePitch = 100
+End
+
+Elite+RifleT "Outsiders qikert"
+	Aggression = 40
+	Skin = 1
+	VoicePitch = 100
+End
+
+Elite+HunterT "FURIA KSCERATO"
+	Aggression = 20
+	Skin = 2
+	VoicePitch = 100
+End
+
+Elite+RifleM "FURIA yuurih"
+	Aggression = 15
+	Skin = 3
+	VoicePitch = 100
+End
+
+Elite+Boomer "FURIA FalleN"
+	Aggression = 35
+	Skin = 4
+	VoicePitch = 100
+End
+
+Elite+RifleD "C9 Ax1Le"
+	Aggression = 20
+	Skin = 1
+	VoicePitch = 100
+End
+
+Elite+RifleE "C9 HObbit"
+	Aggression = 35
+	Skin = 2
+	VoicePitch = 100
+End
+
+Elite+PunchD "C9 Perfecto"
+	Aggression = 20
+	Skin = 3
+	VoicePitch = 100
+End
+
+Elite+RifleT "BIG Krimbo"
+	Aggression = 35
+	Skin = 4
+	VoicePitch = 100
+End
+
+Elite+Precise "BIG mantuu"
+	Aggression = 20
+	Skin = 1
+	VoicePitch = 100
+End
+
+Elite+Power "BIG s1n"
+	Aggression = 35
+	Skin = 2
+	VoicePitch = 100
+End
+
+Elite+RifleT "MIBR exit"
+	Aggression = 45
+	Skin = 3
+	VoicePitch = 100
+End
+
+Elite+RifleT "MIBR brnz4n"
+	Aggression = 30
+	Skin = 4
+	VoicePitch = 100
+End
+
+Elite+HunterS "MIBR saffee"
+	Aggression = 45
+	Skin = 1
+	VoicePitch = 100
+End
+
+Elite+RifleT "Fluxo Lucaozy"
+	Aggression = 40
+	Skin = 2
+	VoicePitch = 100
+End
+
+Elite+Precise "MOUZ torzsi"
+	Aggression = 35
+	Skin = 3
+	VoicePitch = 100
+End
+
+Elite+RifleD "MOUZ xertioN"
+	Aggression = 45
+	Skin = 4
+	VoicePitch = 100
+End
+
+Elite+HunterT "Spirit zont1x"
+	Aggression = 20
+	Skin = 1
+	VoicePitch = 100
+End
+
+Elite+HunterT "COL JT"
+	Aggression = 25
+	Skin = 2
+	VoicePitch = 100
+End
+
+Elite+RifleM "COL floppy"
+	Aggression = 50
+	Skin = 3
+	VoicePitch = 100
+End
+
+Elite+RifleT "EG HexT"
+	Aggression = 45
+	Skin = 4
+	VoicePitch = 100
+End
+
+Elite+Precise "EG junior"
+	Aggression = 25
+	Skin = 1
+	VoicePitch = 100
+End
+
+Elite+HunterT "MRS mopoz"
+	Aggression = 65
+	Skin = 2
+	VoicePitch = 100
+End
+
+Elite+Hunter "00 latto"
+	Aggression = 20
+	Skin = 3
+	VoicePitch = 100
+End
+
+Elite+Eco "00 NEKIZ"
+	Aggression = 10
+	Skin = 4
+	VoicePitch = 100
+End
+
+Elite+RifleE "FNC mezii"
+	Aggression = 25
+	Skin = 1
+	VoicePitch = 100
+End
+
+Elite+Shotgun "FNC afro"
+	Aggression = 50
+	Skin = 2
+	VoicePitch = 100
+End
+
+Elite+RifleT "RA JamYoung"
+	Aggression = 40
+	Skin = 3
+	VoicePitch = 100
+End
+
+Elite+RifleT "RA Moseyuh"
+	Aggression = 35
+	Skin = 4
+	VoicePitch = 100
+End
+
+Elite+Eco "RA Mercury"
+	Aggression = 65
+	Skin = 1
+	VoicePitch = 100
+End
+
+Elite+Boomer "RA kaze"
+	Aggression = 50
+	Skin = 2
+	VoicePitch = 100
+End
+
+Elite+HunterT "RA advent"
+	Aggression = 45
+	Skin = 3
+	VoicePitch = 100
+End
+
+Elite+RifleD "EF Calyx"
+	Aggression = 25
+	Skin = 4
+	VoicePitch = 100
+End
+
+Elite+RifleM "EF MAJ3R"
+	Aggression = 40
+	Skin = 1
+	VoicePitch = 100
+End
+
+Elite+PowerS "EF woxic"
+	Aggression = 25
+	Skin = 2
+	VoicePitch = 100
+End
+
+Elite+Rusher "ITB rallen"
+	Aggression = 35
+	Skin = 3
+	VoicePitch = 100
+End
+
+Elite+Shotgun "ITB CRUC1AL"
+	Aggression = 60
+	Skin = 4
+	VoicePitch = 100
+End
+
+Elite+Freeman "Monte DemQQ"
+	Aggression = 10
+	Skin = 1
+	VoicePitch = 100
+End
+
+Elite+HunterT "Monte sdy"
+	Aggression = 0
+	Skin = 2
+	VoicePitch = 100
+End
+
+Elite+RifleT "forZe shalfey"
+	Aggression = 20
+	Skin = 3
+	VoicePitch = 100
+End
+
+Elite+RifleT "forZe Krad"
+	Aggression = 30
+	Skin = 4
+	VoicePitch = 100
+End
+
+Elite+Hunter "Apeks CacaNito"
+	Aggression = 50
+	Skin = 1
+	VoicePitch = 100
+End
+
+Elite+HunterT "Gray INS"
+	Aggression = 25
+	Skin = 2
+	VoicePitch = 100
+End
+
+Elite+HunterS "Gray aliStair"
+	Aggression = 55
+	Skin = 3
+	VoicePitch = 100
+End
+
+Elite+RifleE "Imp boltz"
+	Aggression = 15
+	Skin = 4
+	VoicePitch = 100
+End
+
+Elite+Shooter "Imp felps"
+	Aggression = 40
+	Skin = 1
+	VoicePitch = 100
+End
+
+Elite+RifleT "BNE SENER1"
+	Aggression = 55
+	Skin = 2
+	VoicePitch = 100
+End
+
+Elite+RifleT "BNE juanflatroo"
+	Aggression = 30
+	Skin = 3
+	VoicePitch = 100
+End
+
+Elite+PowerS "BNE gxx-"
+	Aggression = 15
+	Skin = 4
+	VoicePitch = 100
+End
+
+Elite+HunterT "9z dav1deuS"
+	Aggression = 20
+	Skin = 1
+	VoicePitch = 100
+End
+
+Elite+HunterT "9z buda"
+	Aggression = 45
+	Skin = 2
+	VoicePitch = 100
+End
+
+Elite+Sniper "9z try"
+	Aggression = 15
+	Skin = 3
+	VoicePitch = 100
+End
+
+Elite+HunterS "1win deko"
+	Aggression = 65
+	Skin = 4
+	VoicePitch = 100
+End
+
+Elite+Eco "1win Forester"
+	Aggression = 20
+	Skin = 1
+	VoicePitch = 100
+End
+
+Elite+RifleT "1win Boombl4"
+	Aggression = 35
+	Skin = 2
+	VoicePitch = 100
+End
+
+//----------------------------------------
+
+Expert+RifleD "FaZe ropz"
+	Aggression = 40
+	Skin = 1
+	VoicePitch = 100
+End
+
+Expert+RifleT "FaZe Twistzz"
+	Aggression = 60
+	Skin = 2
+	VoicePitch = 100
+End
+
+Expert+Shotgun "Na'Vi s1mple"
+	Aggression = 45
+	Skin = 1
+	VoicePitch = 100
+End
+
+Expert+RifleT "Na'Vi jL"
+	Aggression = 30
+	Skin = 2
+	VoicePitch = 100
+End
+
+Expert+Almighty "Heroic sjuush"
+	Aggression = 35
+	Skin = 1
+	VoicePitch = 100
+End
+
+Expert+HunterS  "Vitality ZywOo"
+	Aggression = 10
+	Skin = 2
+	VoicePitch = 100
+End
+
+Expert+HunterT "Vitality Magisk"
+	Aggression = 30
+	Skin = 3
+	VoicePitch = 100
+End
+
+Expert+RifleD "G2 NiKo"
+	Aggression = 60
+	Skin = 4
+	VoicePitch = 100
+End
+
+Expert+Shotgun "G2 m0NESY"
+	Aggression = 55
+	Skin = 1
+	VoicePitch = 100
+End
+
+Expert+Sniper "OG regali"
+	Aggression = 35
+	Skin = 2
+	VoicePitch = 100
+End
+
+Expert+RifleT "Liquid YEKINDAR"
+	Aggression = 65
+	Skin = 3
+	VoicePitch = 100
+End
+
+Expert+EcoT "Liquid NAF-FLY"
+	Aggression = 30
+	Skin = 4
+	VoicePitch = 100
+End
+
+Expert+Power "NiP Brollan"
+	Aggression = 45
+	Skin = 1
+	VoicePitch = 100
+End
+
+Expert+HunterS "Nip headtr1ck"
+	Aggression = 30
+	Skin = 2
+	VoicePitch = 100
+End
+
+Expert+SniperD "Astralis dev1ce"
+	Aggression = 40
+	Skin = 3
+	VoicePitch = 100
+End
+
+Expert+Freeman "Astralis blameF"
+	Aggression = 55
+	Skin = 4
+	VoicePitch = 100
+End
+
+Expert+Precise "Outsiders Jame"
+	Aggression = 5
+	Skin = 1
+	VoicePitch = 100
+End
+
+Expert+Almighty "FURIA arT"
+	Aggression = 100
+	Skin = 2
+	VoicePitch = 100
+End
+
+Expert+Shotgun "C9 sh1ro"
+	Aggression = 50
+	Skin = 3
+	VoicePitch = 100
+End
+
+Expert+RifleT "C9 electroNic"
+	Aggression = 15
+	Skin = 4
+	VoicePitch = 100
+End
+
+Expert+Freeman "BIG tabseN"
+	Aggression = 40
+	Skin = 1
+	VoicePitch = 100
+End
+
+Expert+Freeman "MOUZ frozen"
+	Aggression = 75
+	Skin = 2
+	VoicePitch = 100
+End
+
+Expert+RifleT "COL EliGE"
+	Aggression = 30
+	Skin = 3
+	VoicePitch = 100
+End
+
+Expert+Almighty "00 coldzera"
+	Aggression = 35
+	Skin = 4
+	VoicePitch = 100
+End
+
+Expert+RifleT "FNC KRIMZ"
+	Aggression = 50
+	Skin = 1
+	VoicePitch = 100
+End
+
+Expert+Eco "FNC roej"
+	Aggression = 65
+	Skin = 2
+	VoicePitch = 100
+End
+
+Expert+RifleT "EF XANTARES"
+	Aggression = 80
+	Skin = 3
+	VoicePitch = 100
+End
+
+Expert+EcoT "ITB Bymas"
+	Aggression = 25
+	Skin = 4
+	VoicePitch = 100
+End
+
+Expert+Precise "Apeks nawwk"
+	Aggression = 10
+	Skin = 1
+	VoicePitch = 100
+End
+
+Expert+PunchR "Apeks jkaem"
+	Aggression = 55
+	Skin = 2
+	VoicePitch = 100
+End
+
+Expert+RifleT "Gray Sico"
+	Aggression = 25
+	Skin = 3
+	VoicePitch = 100
+End
+
+//----------------------------------------
+
+VeryHard+Player4 001
+	Aggression = 10
+	Skin = 1
+	VoicePitch = 75
+End
+
+VeryHard+Almighty 002
+	Aggression = 75
+	Skin = 2
+	VoicePitch = 100
+End
+
+VeryHard+Player1 003
+	Aggression = 45
+	Skin = 3
+	VoicePitch = 80
+End
+
+VeryHard+Spray 004
+	Aggression = 85
+	Skin = 1
+	VoicePitch = 110
+End
+
+VeryHard+Almighty 130
+	Aggression = 60
+	Skin = 1
+	VoicePitch = 25
+End
+
+VeryHard+Precise 005
+	Aggression = 75
+	Skin = 3
+	VoicePitch = 93
+End
+
+VeryHard+EcoT 006
+	Aggression = 25
+	Skin = 2
+	VoicePitch = 100
+End
+
+VeryHard+RifleE 007
+	Aggression = 80
+	Skin = 4
+	VoicePitch = 86
+End
+
+VeryHard+Shotgun 136
+	Aggression = 30
+	Skin = 2
+	VoicePitch = 94
+End
+
+VeryHard+RifleM 139
+	Aggression = 40
+	Skin = 1
+	VoicePitch = 120
+End
+
+VeryHard+HunterS 141
+	Skin = 1
+	VoicePitch = 91
+End
+
+VeryHard+Shooter 142
+	Skin = 4
+	VoicePitch = 104
+End
+
+VeryHard+Precise 143
+	Skin = 1
+	VoicePitch = 113
+End
+
+VeryHard+Shotgun 144
+	Skin = 2
+	VoicePitch = 84
+End
+
+VeryHard+Boomer 145
+	Skin = 2
+	VoicePitch = 91
+End
+
+VeryHard+Spray 146
+	Skin = 4
+	VoicePitch = 87
+End
+
+VeryHard+Sniper 147
+	Skin = 2
+	VoicePitch = 97
+End
+
+VeryHard+RifleT 148
+	Skin = 2
+	VoicePitch = 113
+End
+
+VeryHard+Hunter 149
+	Skin = 3
+	VoicePitch = 89
+End
+
+VeryHard+Eco 150
+	Skin = 1
+	VoicePitch = 118
+End
+
+VeryHard+RifleM 151
+	Skin = 2
+	VoicePitch = 111
+End
+
+VeryHard+HunterN 152
+	Skin = 2
+	VoicePitch = 117
+End
+
+VeryHard+HunterT 153
+	Skin = 3
+	VoicePitch = 107
+End
+
+VeryHard+RifleT 154
+	Skin = 3
+	VoicePitch = 90
+End
+
+VeryHard+Freeman 155
+	Skin = 1
+	VoicePitch = 93
+End
+
+VeryHard+Power 156
+	Skin = 1
+	VoicePitch = 86
+End
+
+VeryHard+Rifle 157
+	Skin = 2
+	VoicePitch = 108
+End
+
+VeryHard 158
+	Skin = 3
+	VoicePitch = 113
+End
+
+VeryHard+Almighty 159
+	Skin = 2
+	VoicePitch = 118
+End
+
+VeryHard+Almighty 160
+	Skin = 4
+	VoicePitch = 92
+End
+
+VeryHard+PunchD 161
+	Skin = 3
+	VoicePitch = 84
+End
+
+VeryHard+PunchR 162
+	Skin = 1
+	VoicePitch = 95
+End
+
+VeryHard+EcoT 163
+	Skin = 4
+	VoicePitch = 89
+End
+
+VeryHard+Punch 164
+	Skin = 1
+	VoicePitch = 89
+End
+
+VeryHard+PunchT 165
+	Skin = 3
+	VoicePitch = 110
+End
+
+VeryHard+Player5 381
+	Skin = 3
+	VoicePitch = 113
+End
+
+VeryHard+PunchD 382
+	Skin = 4
+	VoicePitch = 104
+End
+
+VeryHard+Spray 383
+	Skin = 2
+	VoicePitch = 96
+End
+
+VeryHard+Shotgun 384
+	Skin = 4
+	VoicePitch = 117
+End
+
+VeryHard+RifleT 385
+	Skin = 3
+	VoicePitch = 80
+End
+
+VeryHard+Eco 386
+	Skin = 2
+	VoicePitch = 115
+End
+
+VeryHard+HunterE 387
+	Skin = 1
+	VoicePitch = 116
+End
+
+VeryHard 388
+	Skin = 3
+	VoicePitch = 118
+End
+
+VeryHard+Power 389
+	Skin = 4
+	VoicePitch = 106
+End
+
+VeryHard+Punch 390
+	Skin = 3
+	VoicePitch = 103
+End
+
+VeryHard+RifleE 391
+	Skin = 2
+	VoicePitch = 92
+End
+
+VeryHard+RifleE 392
+	Skin = 1
+	VoicePitch = 112
+End
+
+VeryHard+Player4 501
+	Aggression = 10
+	Skin = 1
+	VoicePitch = 75
+End
+
+VeryHard+Almighty 502
+	Aggression = 75
+	Skin = 2
+	VoicePitch = 100
+End
+
+VeryHard+Player1 503
+	Aggression = 45
+	Skin = 3
+	VoicePitch = 80
+End
+
+VeryHard+Spray 504
+	Skin = 1
+	VoicePitch = 110
+End
+
+VeryHard+Almighty 505
+	Skin = 1
+	VoicePitch = 25
+End
+
+VeryHard+Precise 506
+	Skin = 3
+	VoicePitch = 93
+End
+
+VeryHard+EcoT 507
+	Skin = 2
+	VoicePitch = 100
+End
+
+VeryHard+RifleT 508
+	Skin = 4
+	VoicePitch = 86
+End
+
+VeryHard+Shotgun 509
+	Skin = 2
+	VoicePitch = 94
+End
+
+VeryHard+RifleE 510
+	Skin = 1
+	VoicePitch = 120
+End
+
+VeryHard+HunterS 511
+	Skin = 1
+	VoicePitch = 91
+End
+
+VeryHard+Shooter 512
+	Skin = 4
+	VoicePitch = 104
+End
+
+VeryHard+Precise 513
+	Skin = 1
+	VoicePitch = 113
+End
+
+VeryHard+Shotgun 514
+	Skin = 2
+	VoicePitch = 84
+End
+
+VeryHard+Boomer 515
+	Skin = 2
+	VoicePitch = 91
+End
+
+VeryHard+Spray 516
+	Skin = 4
+	VoicePitch = 87
+End
+
+VeryHard+Sniper 517
+	Skin = 2
+	VoicePitch = 97
+End
+
+VeryHard+RifleD 518
+	Skin = 2
+	VoicePitch = 113
+End
+
+VeryHard+Hunter 519
+	Skin = 3
+	VoicePitch = 89
+End
+
+VeryHard+Eco 520
+	Skin = 1
+	VoicePitch = 118
+End
+
+VeryHard+RifleM 521
+	Skin = 2
+	VoicePitch = 111
+End
+
+VeryHard+HunterN 522
+	Skin = 2
+	VoicePitch = 117
+End
+
+VeryHard+HunterT 523
+	Skin = 3
+	VoicePitch = 107
+End
+
+VeryHard+RifleT 524
+	Skin = 3
+	VoicePitch = 90
+End
+
+VeryHard+Freeman 525
+	Skin = 1
+	VoicePitch = 93
+End
+
+VeryHard+Power 526
+	Skin = 1
+	VoicePitch = 86
+End
+
+VeryHard+Rifle 527
+	Skin = 2
+	VoicePitch = 108
+End
+
+VeryHard 528
+	Skin = 3
+	VoicePitch = 113
+End
+
+VeryHard+Almighty 529
+	Skin = 2
+	VoicePitch = 118
+End
+
+VeryHard+Almighty 530
+	Skin = 4
+	VoicePitch = 92
+End
+
+VeryHard+PunchD 531
+	Skin = 3
+	VoicePitch = 84
+End
+
+VeryHard+PunchR 532
+	Skin = 1
+	VoicePitch = 95
+End
+
+VeryHard+EcoT 533
+	Skin = 4
+	VoicePitch = 89
+End
+
+VeryHard+Punch 534
+	Skin = 1
+	VoicePitch = 89
+End
+
+VeryHard+PunchT 535
+	Skin = 3
+	VoicePitch = 110
+End
+
+VeryHard+Player5 536
+	Skin = 3
+	VoicePitch = 113
+End
+
+VeryHard+PunchD 537
+	Skin = 4
+	VoicePitch = 104
+End
+
+VeryHard+Spray 538
+	Skin = 2
+	VoicePitch = 96
+End
+
+VeryHard+Shotgun 539
+	Skin = 4
+	VoicePitch = 117
+End
+
+VeryHard+RifleT 540
+	Skin = 3
+	VoicePitch = 80
+End
+
+VeryHard+Eco 541
+	Skin = 2
+	VoicePitch = 115
+End
+
+VeryHard+PowerS 542
+	Skin = 1
+	VoicePitch = 116
+End
+
+VeryHard 543
+	Skin = 3
+	VoicePitch = 118
+End
+
+VeryHard+Power 544
+	Skin = 4
+	VoicePitch = 106
+End
+
+VeryHard+Punch 545
+	Skin = 3
+	VoicePitch = 103
+End
+
+VeryHard+RifleD 546
+	Skin = 2
+	VoicePitch = 92
+End
+
+VeryHard+RifleE 547
+	Skin = 1
+	VoicePitch = 112
+End
+
+VeryHard+Noober 1001
+	Aggression = 85
+	Skin = 4
+	VoicePitch = 106
+End
+
+VeryHard+Autosniper 1002
+	Aggression = 15
+	Skin = 3
+	VoicePitch = 103
+End
+
+VeryHard+Tank 1003
+	Aggression = 60
+	Skin = 2
+	VoicePitch = 92
+End
+
+VeryHard+Rusher 1004
+	Aggression = 100
+	Skin = 1
+	VoicePitch = 112
+End
+
+//----------------------------------------
+
+Hard+Sniper 008
+	Skin = 1
+	VoicePitch = 100
+End
+
+Hard+Freeman 009
+	Skin = 1
+	VoicePitch = 95
+End
+
+Hard+RifleD 010
+	Skin = 2
+	VoicePitch = 90
+End
+
+Hard+Sniper 011
+	Skin = 4
+	VoicePitch = 102
+End
+
+Hard+Hunter 012
+	Skin = 1
+	VoicePitch = 98
+End
+
+Hard+Hunter 013
+	Skin = 2
+	VoicePitch = 96
+End
+
+Hard+Sniper 014
+	Skin = 4
+	VoicePitch = 103
+End
+
+Hard+Shooter 015
+	Skin = 1
+	VoicePitch = 105
+End
+
+Hard+RifleD 016
+	Skin = 2
+	VoicePitch = 97
+End
+
+Hard+HunterT 017
+	Skin = 4
+	VoicePitch = 84
+End
+
+Hard+Player2 018
+	Skin = 1
+	VoicePitch = 90
+End
+
+Hard+Precise 019
+	Skin = 2
+	VoicePitch = 98
+End
+
+Hard+PunchT 020
+	Skin = 3
+	VoicePitch = 110
+End
+
+Hard+Sniper 021
+	Skin = 4
+	VoicePitch = 103
+End
+
+Hard+Punch 022
+	Skin = 2
+	VoicePitch = 110
+End
+
+Hard+EcoD 135
+	Skin = 1
+	VoicePitch = 110
+End
+
+Hard+Almighty 137
+	Skin = 3
+	VoicePitch = 85
+End
+
+Hard+Spray 166
+	Skin = 1
+	VoicePitch = 109
+End
+
+Hard+Sniper 167
+	Skin = 1
+	VoicePitch = 106
+End
+
+Hard+HunterS 168
+	Skin = 2
+	VoicePitch = 93
+End
+
+Hard+Precise 169
+	Skin = 2
+	VoicePitch = 105
+End
+
+Hard+Shooter 170
+	Skin = 1
+	VoicePitch = 116
+End
+
+Hard+SniperD 171
+	Skin = 3
+	VoicePitch = 111
+End
+
+Hard+Almighty 172
+	Skin = 2
+	VoicePitch = 86
+End
+
+Hard+Almighty 173
+	Skin = 4
+	VoicePitch = 89
+End
+
+Hard+Rifle 174
+	Skin = 4
+	VoicePitch = 102
+End
+
+Hard+Almighty 175
+	Skin = 1
+	VoicePitch = 86
+End
+
+Hard 176
+	Skin = 2
+	VoicePitch = 85
+End
+
+Hard+RifleT 177
+	Skin = 1
+	VoicePitch = 91
+End
+
+Hard+RifleT 178
+	Skin = 2
+	VoicePitch = 117
+End
+
+Hard+RifleT 179
+	Skin = 1
+	VoicePitch = 93
+End
+
+Hard+RifleD 180
+	Skin = 2
+	VoicePitch = 93
+End
+
+Hard+Hunter 181
+	Skin = 2
+	VoicePitch = 80
+End
+
+Hard+Power 182
+	Skin = 2
+	VoicePitch = 105
+End
+
+Hard+Eco 183
+	Skin = 4
+	VoicePitch = 104
+End
+
+Hard+Freeman 184
+	Skin = 1
+	VoicePitch = 98
+End
+
+Hard+HunterT 185
+	Skin = 1
+	VoicePitch = 112
+End
+
+Hard+RifleM 186
+	Skin = 4
+	VoicePitch = 109
+End
+
+Hard+EcoD 187
+	Skin = 3
+	VoicePitch = 101
+End
+
+Hard+HunterN 188
+	Skin = 1
+	VoicePitch = 114
+End
+
+Hard+PunchD 189
+	Skin = 4
+	VoicePitch = 102
+End
+
+Hard+EcoT 190
+	Skin = 2
+	VoicePitch = 107
+End
+
+Hard+Power 191
+	Skin = 4
+	VoicePitch = 103
+End
+
+Hard+PunchT 192
+	Skin = 4
+	VoicePitch = 116
+End
+
+Hard+Punch 193
+	Skin = 2
+	VoicePitch = 84
+End
+
+Hard+PunchR 194
+	Skin = 1
+	VoicePitch = 118
+End
+
+Hard+Shotgun 195
+	Skin = 3
+	VoicePitch = 107
+End
+
+Hard+Power 393
+	Skin = 1
+	VoicePitch = 114
+End
+
+Hard+RifleE 394
+	Skin = 2
+	VoicePitch = 117
+End
+
+Hard+Sniper 395
+	Skin = 4
+	VoicePitch = 92
+End
+
+Hard+Boomer 396
+	Skin = 3
+	VoicePitch = 82
+End
+
+Hard+Almighty 397
+	Skin = 1
+	VoicePitch = 94
+End
+
+Hard+PunchD 398
+	Skin = 4
+	VoicePitch = 119
+End
+
+Hard 399
+	Skin = 3
+	VoicePitch = 96
+End
+
+Hard+Player3 400
+	Skin = 2
+	VoicePitch = 84
+End
+
+Hard+HunterE 401
+	Skin = 3
+	VoicePitch = 118
+End
+
+Hard+HunterN 402
+	Skin = 4
+	VoicePitch = 96
+End
+
+Hard+PowerS 403
+	Skin = 4
+	VoicePitch = 86
+End
+
+Hard+PunchR 404
+	Skin = 4
+	VoicePitch = 102
+End
+
+Hard+Almighty 405
+	Skin = 2
+	VoicePitch = 102
+End
+
+Hard+RifleD 406
+	Skin = 4
+	VoicePitch = 107
+End
+
+Hard+Spray 407
+	Skin = 2
+	VoicePitch = 92
+End
+
+Hard+Eco 408
+	Skin = 1
+	VoicePitch = 105
+End
+
+Hard+RifleT 409
+	Skin = 4
+	VoicePitch = 92
+End
+
+Hard+RifleT 410
+	Skin = 2
+	VoicePitch = 120
+End
+
+Hard+Sniper 548
+	Skin = 1
+	VoicePitch = 100
+End
+
+Hard+Freeman 549
+	Skin = 1
+	VoicePitch = 95
+End
+
+Hard+RifleD 550
+	Skin = 2
+	VoicePitch = 90
+End
+
+Hard+Sniper 551
+	Skin = 4
+	VoicePitch = 102
+End
+
+Hard+Hunter 552
+	Skin = 1
+	VoicePitch = 98
+End
+
+Hard+Hunter 553
+	Skin = 2
+	VoicePitch = 96
+End
+
+Hard+Sniper 554
+	Skin = 4
+	VoicePitch = 103
+End
+
+Hard+Shooter 555
+	Skin = 1
+	VoicePitch = 105
+End
+
+Hard+RifleD 556
+	Skin = 2
+	VoicePitch = 97
+End
+
+Hard+HunterT 557
+	Skin = 4
+	VoicePitch = 84
+End
+
+Hard+Player2 558
+	Skin = 1
+	VoicePitch = 90
+End
+
+Hard+Precise 559
+	Skin = 2
+	VoicePitch = 98
+End
+
+Hard+PunchT 560
+	Skin = 3
+	VoicePitch = 110
+End
+
+Hard+Sniper 561
+	Skin = 4
+	VoicePitch = 103
+End
+
+Hard+Punch 562
+	Skin = 2
+	VoicePitch = 110
+End
+
+Hard+EcoD 563
+	Skin = 1
+	VoicePitch = 110
+End
+
+Hard+Almighty 564
+	Skin = 3
+	VoicePitch = 85
+End
+
+Hard+Spray 565
+	Skin = 1
+	VoicePitch = 109
+End
+
+Hard+Sniper 566
+	Skin = 1
+	VoicePitch = 106
+End
+
+Hard+HunterS 567
+	Skin = 2
+	VoicePitch = 93
+End
+
+Hard+Precise 568
+	Skin = 2
+	VoicePitch = 105
+End
+
+Hard+Shooter 569
+	Skin = 1
+	VoicePitch = 116
+End
+
+Hard+SniperD 570
+	Skin = 3
+	VoicePitch = 111
+End
+
+Hard+Almighty 571
+	Skin = 2
+	VoicePitch = 86
+End
+
+Hard+Almighty 572
+	Skin = 4
+	VoicePitch = 89
+End
+
+Hard+Rifle 573
+	Skin = 4
+	VoicePitch = 102
+End
+
+Hard+Almighty 574
+	Skin = 1
+	VoicePitch = 86
+End
+
+Hard 575
+	Skin = 2
+	VoicePitch = 85
+End
+
+Hard+RifleT 576
+	Skin = 1
+	VoicePitch = 91
+End
+
+Hard+Autosniper 577
+	Skin = 2
+	VoicePitch = 117
+End
+
+Hard+RifleT 578
+	Skin = 1
+	VoicePitch = 93
+End
+
+Hard+RifleD 579
+	Skin = 2
+	VoicePitch = 93
+End
+
+Hard+Hunter 580
+	Skin = 2
+	VoicePitch = 80
+End
+
+Hard+Power 581
+	Skin = 2
+	VoicePitch = 105
+End
+
+Hard+Eco 582
+	Skin = 4
+	VoicePitch = 104
+End
+
+Hard+Freeman 583
+	Skin = 1
+	VoicePitch = 98
+End
+
+Hard+HunterT 584
+	Skin = 1
+	VoicePitch = 112
+End
+
+Hard+RifleM 585
+	Skin = 4
+	VoicePitch = 109
+End
+
+Hard+EcoD 586
+	Skin = 3
+	VoicePitch = 101
+End
+
+Hard+HunterN 587
+	Skin = 1
+	VoicePitch = 114
+End
+
+Hard+PunchD 588
+	Skin = 4
+	VoicePitch = 102
+End
+
+Hard+EcoT 589
+	Skin = 2
+	VoicePitch = 107
+End
+
+Hard+Power 590
+	Skin = 4
+	VoicePitch = 103
+End
+
+Hard+PunchT 591
+	Skin = 4
+	VoicePitch = 116
+End
+
+Hard+Punch 592
+	Skin = 2
+	VoicePitch = 84
+End
+
+Hard+PunchR 593
+	Skin = 1
+	VoicePitch = 118
+End
+
+Hard+Shotgun 594
+	Skin = 3
+	VoicePitch = 107
+End
+
+Hard+Power 595
+	Skin = 1
+	VoicePitch = 114
+End
+
+Hard+RifleE 596
+	Skin = 2
+	VoicePitch = 117
+End
+
+Hard+Sniper 597
+	Skin = 4
+	VoicePitch = 92
+End
+
+Hard+Boomer 598
+	Skin = 3
+	VoicePitch = 82
+End
+
+Hard+Almighty 599
+	Skin = 1
+	VoicePitch = 94
+End
+
+Hard+PunchD 600
+	Skin = 4
+	VoicePitch = 119
+End
+
+Hard 601
+	Skin = 3
+	VoicePitch = 96
+End
+
+Hard+Player3 602
+	Skin = 2
+	VoicePitch = 84
+End
+
+Hard+HunterE 603
+	Skin = 3
+	VoicePitch = 118
+End
+
+Hard+HunterN 604
+	Skin = 4
+	VoicePitch = 96
+End
+
+Hard+PowerS 605
+	Skin = 4
+	VoicePitch = 86
+End
+
+Hard+PunchR 606
+	Skin = 4
+	VoicePitch = 102
+End
+
+Hard+Almighty 607
+	Skin = 2
+	VoicePitch = 102
+End
+
+Hard+RifleD 608
+	Skin = 4
+	VoicePitch = 107
+End
+
+Hard+Spray 609
+	Skin = 2
+	VoicePitch = 92
+End
+
+Hard+Eco 610
+	Skin = 1
+	VoicePitch = 105
+End
+
+Hard+RifleT 611
+	Skin = 4
+	VoicePitch = 92
+End
+
+Hard+RifleT 612
+	Skin = 2
+	VoicePitch = 120
+End
+
+Hard+Autosniper 1005
+	Skin = 2
+	VoicePitch = 92
+End
+
+Hard+Noober 1006
+	Skin = 1
+	VoicePitch = 105
+End
+
+Hard+RifleT 1007
+	Skin = 4
+	VoicePitch = 92
+End
+
+Hard+Tank 1008
+	Skin = 2
+	VoicePitch = 120
+End
+
+Hard+Rusher 1009
+	Skin = 2
+	VoicePitch = 120
+End
+
+//----------------------------------------
+
+Tough+EcoT 023
+	Skin = 3
+	VoicePitch = 120
+End
+
+Tough+SniperD 024
+	Skin = 1
+	VoicePitch = 95
+End
+
+Tough+PowerS 025
+	Skin = 1
+	VoicePitch = 100
+End
+
+Tough+Almighty 026
+	Skin = 2
+	VoicePitch = 104
+End
+
+Tough+HunterS 027
+	Skin = 4
+	VoicePitch = 98
+End
+
+Tough 028
+	Skin = 1
+	VoicePitch = 100
+End
+
+Tough+Player2 029
+	Skin = 2
+	VoicePitch = 102
+End
+
+Tough+Hunter 030
+	Skin = 4
+	VoicePitch = 95
+End
+
+Tough+Eco 031
+	Skin = 1
+	VoicePitch = 95
+End
+
+Tough+Spray 032
+	Skin = 2
+	VoicePitch = 110
+End
+
+Tough+Freeman 033
+	Skin = 4
+	VoicePitch = 112
+End
+
+Tough 034
+	Skin = 1
+	VoicePitch = 90
+End
+
+Tough+Shooter 035
+	Skin = 2
+	VoicePitch = 115
+End
+
+Tough+RifleE 036
+	Skin = 4
+	VoicePitch = 107
+End
+
+Tough+Player3 037
+	Skin = 2
+	VoicePitch = 102
+End
+
+Tough 038
+	Skin = 1
+	VoicePitch = 98
+End
+
+Tough+RifleE 039
+	Skin = 2
+	VoicePitch = 100
+End
+
+Tough+Boomer 040
+	Skin = 4
+	VoicePitch = 95
+End
+
+Tough+HunterE 041
+	Skin = 1
+	VoicePitch = 86
+End
+
+Tough+Power 042
+	Skin = 2
+	VoicePitch = 100
+End
+
+Tough+Rifle 043
+	Skin = 4
+	VoicePitch = 95
+End
+
+Tough 196
+	Skin = 1
+	VoicePitch = 102
+End
+
+Tough+Rifle 197
+	Skin = 3
+	VoicePitch = 93
+End
+
+Tough+RifleE 198
+	Skin = 3
+	VoicePitch = 86
+End
+
+Tough+Shotgun 199
+	Skin = 4
+	VoicePitch = 106
+End
+
+Tough+Power 200
+	Skin = 2
+	VoicePitch = 113
+End
+
+Tough+EcoT 201
+	Skin = 3
+	VoicePitch = 99
+End
+
+Tough+Shooter 202
+	Skin = 2
+	VoicePitch = 99
+End
+
+Tough+Rifle 203
+	Skin = 3
+	VoicePitch = 81
+End
+
+Tough+PunchT 204
+	Skin = 3
+	VoicePitch = 101
+End
+
+Tough+Rifle 205
+	Skin = 1
+	VoicePitch = 108
+End
+
+Tough+Hunter 206
+	Skin = 4
+	VoicePitch = 84
+End
+
+Tough+Freeman 207
+	Skin = 2
+	VoicePitch = 96
+End
+
+Tough+PunchR 208
+	Skin = 2
+	VoicePitch = 104
+End
+
+Tough+Almighty 209
+	Skin = 2
+	VoicePitch = 82
+End
+
+Tough+HunterE 210
+	Skin = 2
+	VoicePitch = 98
+End
+
+Tough 211
+	Skin = 1
+	VoicePitch = 120
+End
+
+Tough 212
+	Skin = 1
+	VoicePitch = 80
+End
+
+Tough+HunterT 213
+	Skin = 1
+	VoicePitch = 111
+End
+
+Tough+HunterN 214
+	Skin = 1
+	VoicePitch = 91
+End
+
+Tough 215
+	Skin = 1
+	VoicePitch = 98
+End
+
+Tough+PunchD 216
+	Skin = 3
+	VoicePitch = 107
+End
+
+Tough+RifleT 217
+	Skin = 1
+	VoicePitch = 109
+End
+
+Tough+Boomer 218
+	Skin = 3
+	VoicePitch = 115
+End
+
+Tough+RifleM 219
+	Skin = 2
+	VoicePitch = 89
+End
+
+Tough+Almighty 220
+	Skin = 4
+	VoicePitch = 109
+End
+
+Tough+RifleD 221
+	Skin = 2
+	VoicePitch = 85
+End
+
+Tough+Almighty 222
+	Skin = 3
+	VoicePitch = 88
+End
+
+Tough+PunchT 223
+	Skin = 3
+	VoicePitch = 119
+End
+
+Tough+RifleT 224
+	Skin = 4
+	VoicePitch = 87
+End
+
+Tough+Almighty 225
+	Skin = 4
+	VoicePitch = 93
+End
+
+Tough+Sniper 226
+	Skin = 3
+	VoicePitch = 118
+End
+
+Tough+Almighty 227
+	Skin = 3
+	VoicePitch = 118
+End
+
+Tough 228
+	Skin = 4
+	VoicePitch = 109
+End
+
+Tough+Punch 229
+	Skin = 3
+	VoicePitch = 86
+End
+
+Tough 230
+	Skin = 3
+	VoicePitch = 82
+End
+
+Tough 231
+	Skin = 3
+	VoicePitch = 84
+End
+
+Tough+Almighty 232
+	Skin = 1
+	VoicePitch = 114
+End
+
+Tough+Almighty 233
+	Skin = 4
+	VoicePitch = 110
+End
+
+Tough+Eco 234
+	Skin = 3
+	VoicePitch = 118
+End
+
+Tough+Almighty 235
+	Skin = 4
+	VoicePitch = 117
+End
+
+Tough+Power 236
+	Skin = 1
+	VoicePitch = 80
+End
+
+Tough+EcoD 237
+	Skin = 1
+	VoicePitch = 113
+End
+
+Tough+HunterN 238
+	Skin = 2
+	VoicePitch = 97
+End
+
+Tough+PowerS 239
+	Skin = 1
+	VoicePitch = 109
+End
+
+Tough 240
+	Skin = 4
+	VoicePitch = 93
+End
+
+Tough+RifleM 411
+	Skin = 1
+	VoicePitch = 117
+End
+
+Tough+RifleT 412
+	Skin = 2
+	VoicePitch = 94
+End
+
+Tough 413
+	Skin = 3
+	VoicePitch = 90
+End
+
+Tough+HunterS 414
+	Skin = 3
+	VoicePitch = 117
+End
+
+Tough 415
+	Skin = 1
+	VoicePitch = 114
+End
+
+Tough 416
+	Skin = 1
+	VoicePitch = 89
+End
+
+Tough+HunterE 417
+	Skin = 2
+	VoicePitch = 101
+End
+
+Tough+Hunter 418
+	Skin = 3
+	VoicePitch = 111
+End
+
+Tough 419
+	Skin = 4
+	VoicePitch = 112
+End
+
+Tough+HunterN 420
+	Skin = 3
+	VoicePitch = 93
+End
+
+Tough+Shotgun 421
+	Skin = 4
+	VoicePitch = 84
+End
+
+Tough 422
+	Skin = 2
+	VoicePitch = 112
+End
+
+Tough+EcoT 423
+	Skin = 2
+	VoicePitch = 110
+End
+
+Tough+Player3 424
+	Skin = 1
+	VoicePitch = 106
+End
+
+Tough+Almighty 425
+	Skin = 3
+	VoicePitch = 96
+End
+
+Tough+Player1 426
+	Skin = 1
+	VoicePitch = 108
+End
+
+Tough+Almighty 427
+	Skin = 4
+	VoicePitch = 118
+End
+
+Tough 428
+	Skin = 1
+	VoicePitch = 87
+End
+
+Tough+Eco 429
+	Skin = 4
+	VoicePitch = 84
+End
+
+Tough+Punch 430
+	Skin = 3
+	VoicePitch = 105
+End
+
+Tough+Almighty 431
+	Skin = 2
+	VoicePitch = 113
+End
+
+Tough+Rifle 432
+	Skin = 2
+	VoicePitch = 102
+End
+
+Tough+EcoT 433
+	Skin = 3
+	VoicePitch = 83
+End
+
+Tough+HunterT 434
+	Skin = 4
+	VoicePitch = 105
+End
+
+Tough+EcoT 613
+	Skin = 3
+	VoicePitch = 120
+End
+
+Tough+SniperD 614
+	Skin = 1
+	VoicePitch = 95
+End
+
+Tough+PowerS 615
+	Skin = 1
+	VoicePitch = 100
+End
+
+Tough+Almighty 616
+	Skin = 2
+	VoicePitch = 104
+End
+
+Tough+HunterS 617
+	Skin = 4
+	VoicePitch = 98
+End
+
+Tough 618
+	Skin = 1
+	VoicePitch = 100
+End
+
+Tough+Player2 619
+	Skin = 2
+	VoicePitch = 102
+End
+
+Tough+Hunter 620
+	Skin = 4
+	VoicePitch = 95
+End
+
+Tough+Eco 621
+	Skin = 1
+	VoicePitch = 95
+End
+
+Tough+Spray 622
+	Skin = 2
+	VoicePitch = 110
+End
+
+Tough+Freeman 623
+	Skin = 4
+	VoicePitch = 112
+End
+
+Tough 624
+	Skin = 1
+	VoicePitch = 90
+End
+
+Tough+Shooter 625
+	Skin = 2
+	VoicePitch = 115
+End
+
+Tough+RifleE 626
+	Skin = 4
+	VoicePitch = 107
+End
+
+Tough+Player3 627
+	Skin = 2
+	VoicePitch = 102
+End
+
+Tough 628
+	Skin = 1
+	VoicePitch = 98
+End
+
+Tough+RifleE 629
+	Skin = 2
+	VoicePitch = 100
+End
+
+Tough+Boomer 630
+	Skin = 4
+	VoicePitch = 95
+End
+
+Tough+HunterE 631
+	Skin = 1
+	VoicePitch = 86
+End
+
+Tough+Power 632
+	Skin = 2
+	VoicePitch = 100
+End
+
+Tough+Rifle 633
+	Skin = 4
+	VoicePitch = 95
+End
+
+Tough 634
+	Skin = 1
+	VoicePitch = 102
+End
+
+Tough+Rifle 635
+	Skin = 3
+	VoicePitch = 93
+End
+
+Tough+RifleE 636
+	Skin = 3
+	VoicePitch = 86
+End
+
+Tough+Shotgun 637
+	Skin = 4
+	VoicePitch = 106
+End
+
+Tough+Power 638
+	Skin = 2
+	VoicePitch = 113
+End
+
+Tough+EcoT 639
+	Skin = 3
+	VoicePitch = 99
+End
+
+Tough+Shooter 640
+	Skin = 2
+	VoicePitch = 99
+End
+
+Tough+Rifle 641
+	Skin = 3
+	VoicePitch = 81
+End
+
+Tough+PunchT 642
+	Skin = 3
+	VoicePitch = 101
+End
+
+Tough+Rifle 643
+	Skin = 1
+	VoicePitch = 108
+End
+
+Tough+Hunter 644
+	Skin = 4
+	VoicePitch = 84
+End
+
+Tough+Freeman 645
+	Skin = 2
+	VoicePitch = 96
+End
+
+Tough+PunchR 646
+	Skin = 2
+	VoicePitch = 104
+End
+
+Tough+Almighty 647
+	Skin = 2
+	VoicePitch = 82
+End
+
+Tough+HunterE 648
+	Skin = 2
+	VoicePitch = 98
+End
+
+Tough 649
+	Skin = 1
+	VoicePitch = 120
+End
+
+Tough 650
+	Skin = 1
+	VoicePitch = 80
+End
+
+Tough+HunterT 651
+	Skin = 1
+	VoicePitch = 111
+End
+
+Tough+HunterN 652
+	Skin = 1
+	VoicePitch = 91
+End
+
+Tough 653
+	Skin = 1
+	VoicePitch = 98
+End
+
+Tough+PunchD 654
+	Skin = 3
+	VoicePitch = 107
+End
+
+Tough+RifleT 655
+	Skin = 1
+	VoicePitch = 109
+End
+
+Tough+Boomer 656
+	Skin = 3
+	VoicePitch = 115
+End
+
+Tough+RifleM 657
+	Skin = 2
+	VoicePitch = 89
+End
+
+Tough+Almighty 658
+	Skin = 4
+	VoicePitch = 109
+End
+
+Tough+RifleD 659
+	Skin = 2
+	VoicePitch = 85
+End
+
+Tough+Almighty 660
+	Skin = 3
+	VoicePitch = 88
+End
+
+Tough+PunchT 661
+	Skin = 3
+	VoicePitch = 119
+End
+
+Tough+RifleT 662
+	Skin = 4
+	VoicePitch = 87
+End
+
+Tough+Almighty 663
+	Skin = 4
+	VoicePitch = 93
+End
+
+Tough+Sniper 664
+	Skin = 3
+	VoicePitch = 118
+End
+
+Tough+Almighty 665
+	Skin = 3
+	VoicePitch = 118
+End
+
+Tough 666
+	Skin = 4
+	VoicePitch = 109
+End
+
+Tough+Punch 667
+	Skin = 3
+	VoicePitch = 86
+End
+
+Tough 668
+	Skin = 3
+	VoicePitch = 82
+End
+
+Tough 669
+	Skin = 3
+	VoicePitch = 84
+End
+
+Tough+Almighty 670
+	Skin = 1
+	VoicePitch = 114
+End
+
+Tough+Almighty 671
+	Skin = 4
+	VoicePitch = 110
+End
+
+Tough+Eco 672
+	Skin = 3
+	VoicePitch = 118
+End
+
+Tough+Almighty 673
+	Skin = 4
+	VoicePitch = 117
+End
+
+Tough+Power 674
+	Skin = 1
+	VoicePitch = 80
+End
+
+Tough+EcoD 675
+	Skin = 1
+	VoicePitch = 113
+End
+
+Tough+HunterN 676
+	Skin = 2
+	VoicePitch = 97
+End
+
+Tough+PowerS 677
+	Skin = 1
+	VoicePitch = 109
+End
+
+Tough 678
+	Skin = 4
+	VoicePitch = 93
+End
+
+Tough+RifleM 679
+	Skin = 1
+	VoicePitch = 117
+End
+
+Tough+RifleT 680
+	Skin = 2
+	VoicePitch = 94
+End
+
+Tough 681
+	Skin = 3
+	VoicePitch = 90
+End
+
+Tough+HunterS 682
+	Skin = 3
+	VoicePitch = 117
+End
+
+Tough 683
+	Skin = 1
+	VoicePitch = 114
+End
+
+Tough 684
+	Skin = 1
+	VoicePitch = 89
+End
+
+Tough+HunterE 685
+	Skin = 2
+	VoicePitch = 101
+End
+
+Tough+Hunter 686
+	Skin = 3
+	VoicePitch = 111
+End
+
+Tough 687
+	Skin = 4
+	VoicePitch = 112
+End
+
+Tough+HunterN 688
+	Skin = 3
+	VoicePitch = 93
+End
+
+Tough+Shotgun 689
+	Skin = 4
+	VoicePitch = 84
+End
+
+Tough 690
+	Skin = 2
+	VoicePitch = 112
+End
+
+Tough+EcoT 691
+	Skin = 2
+	VoicePitch = 110
+End
+
+Tough+Player3 692
+	Skin = 1
+	VoicePitch = 106
+End
+
+Tough+Almighty 693
+	Skin = 3
+	VoicePitch = 96
+End
+
+Tough+Player1 694
+	Skin = 1
+	VoicePitch = 108
+End
+
+Tough+Almighty 695
+	Skin = 4
+	VoicePitch = 118
+End
+
+Tough 696
+	Skin = 1
+	VoicePitch = 87
+End
+
+Tough+Eco 697
+	Skin = 4
+	VoicePitch = 84
+End
+
+Tough+Punch 698
+	Skin = 3
+	VoicePitch = 105
+End
+
+Tough+Almighty 699
+	Skin = 2
+	VoicePitch = 113
+End
+
+Tough+Rifle 700
+	Skin = 2
+	VoicePitch = 102
+End
+
+Tough+EcoT 701
+	Skin = 3
+	VoicePitch = 83
+End
+
+Tough+HunterT 702
+	Skin = 4
+	VoicePitch = 105
+End
+
+Tough+HunterE 1010
+	Skin = 4
+	VoicePitch = 80
+End
+
+Tough+RifleM 1011
+	Skin = 1
+	VoicePitch = 86
+End
+
+Tough+Tank 1012
+	Skin = 2
+	VoicePitch = 95
+End
+
+Tough+Autosniper 1013
+	Skin = 3
+	VoicePitch = 83
+End
+
+Tough+Autosniper 1014
+	Skin = 2
+	VoicePitch = 100
+End
+
+Tough+Noober 1015
+	Skin = 3
+	VoicePitch = 74
+End
+
+Tough+Rusher 1016
+	Skin = 1
+	VoicePitch = 77
+End
+
+
+//----------------------------------------
+
+Normal+Rifle 044
+	Skin = 1
+	VoicePitch = 105
+End
+
+Normal+PunchT 045
+	Skin = 2
+	VoicePitch = 90
+End
+
+Normal+Player2 046
+	Skin = 3
+	VoicePitch = 100
+End
+
+Normal 047
+	Skin = 4
+	VoicePitch = 107
+End
+
+Normal+SniperD 048
+	Skin = 1
+	VoicePitch = 104
+End
+
+Normal 049
+	Skin = 2
+	VoicePitch = 110
+End
+
+Normal 050
+	Skin = 2
+	VoicePitch = 110
+End
+
+Normal+Player1 051
+	Skin = 3
+	VoicePitch = 95
+End
+
+Normal+Boomer 052
+	Skin = 4
+	VoicePitch = 112
+End
+
+Normal 053
+	Skin = 1
+	VoicePitch = 111
+End
+
+Normal+Freeman 054
+	Skin = 3
+	VoicePitch = 115
+End
+
+Normal+Boomer 055
+	Skin = 4
+	VoicePitch = 112
+End
+
+Normal 056
+	Skin = 1
+	VoicePitch = 96
+End
+
+Normal+Player1 057
+	Skin = 2
+	VoicePitch = 98
+End
+
+Normal+PunchT 058
+	Skin = 4
+	VoicePitch = 110
+End
+
+Normal 059
+	Skin = 1
+	VoicePitch = 95
+End
+
+Normal+Sniper 060
+	Skin = 2
+	VoicePitch = 100
+End
+
+Normal 061
+	Skin = 4
+	VoicePitch = 99
+End
+
+Normal+HunterS 062
+	Skin = 3
+	VoicePitch = 98
+End
+
+Normal 063
+	Skin = 1
+	VoicePitch = 105
+End
+
+Normal 064
+	Skin = 2
+	VoicePitch = 115
+End
+
+Normal+Shooter 065
+	Skin = 3
+	VoicePitch = 110
+End
+
+Normal 066
+	Skin = 4
+	VoicePitch = 92
+End
+
+Normal+HunterT 138
+	Skin = 4
+	VoicePitch = 103
+End
+
+Normal+EcoT 241
+	Skin = 1
+	VoicePitch = 115
+End
+
+Normal+Eco 242
+	Skin = 3
+	VoicePitch = 97
+End
+
+Normal+HunterS 243
+	Skin = 4
+	VoicePitch = 96
+End
+
+Normal 244
+	Skin = 4
+	VoicePitch = 117
+End
+
+Normal+Almighty 245
+	Skin = 3
+	VoicePitch = 93
+End
+
+Normal+EcoD 246
+	Skin = 2
+	VoicePitch = 87
+End
+
+Normal 247
+	Skin = 1
+	VoicePitch = 88
+End
+
+Normal 248
+	Skin = 4
+	VoicePitch = 96
+End
+
+Normal 249
+	Skin = 2
+	VoicePitch = 119
+End
+
+Normal 250
+	Skin = 3
+	VoicePitch = 108
+End
+
+Normal+RifleT 251
+	Skin = 2
+	VoicePitch = 81
+End
+
+Normal+RifleE 252
+	Skin = 3
+	VoicePitch = 98
+End
+
+Normal+RifleE 253
+	Skin = 1
+	VoicePitch = 108
+End
+
+Normal 254
+	Skin = 4
+	VoicePitch = 120
+End
+
+Normal 255
+	Skin = 2
+	VoicePitch = 98
+End
+
+Normal 256
+	Skin = 1
+	VoicePitch = 104
+End
+
+Normal+Freeman 257
+	Skin = 1
+	VoicePitch = 108
+End
+
+Normal+Player3 258
+	Skin = 3
+	VoicePitch = 119
+End
+
+Normal+EcoD 259
+	Skin = 4
+	VoicePitch = 107
+End
+
+Normal+Almighty 260
+	Skin = 3
+	VoicePitch = 120
+End
+
+Normal+Hunter 261
+	Skin = 2
+	VoicePitch = 114
+End
+
+Normal+HunterE 262
+	Skin = 1
+	VoicePitch = 110
+End
+
+Normal+PunchT 263
+	Skin = 2
+	VoicePitch = 113
+End
+
+Normal+PunchD 264
+	Skin = 2
+	VoicePitch = 100
+End
+
+Normal+PunchR 265
+	Skin = 4
+	VoicePitch = 95
+End
+
+Normal 266
+	Skin = 4
+	VoicePitch = 87
+End
+
+Normal 267
+	Skin = 1
+	VoicePitch = 104
+End
+
+Normal+PunchR 268
+	Skin = 3
+	VoicePitch = 84
+End
+
+Normal 269
+	Skin = 3
+	VoicePitch = 119
+End
+
+Normal+PowerS 270
+	Skin = 1
+	VoicePitch = 80
+End
+
+Normal+Almighty 271
+	Skin = 2
+	VoicePitch = 93
+End
+
+Normal+Almighty 272
+	Skin = 4
+	VoicePitch = 98
+End
+
+Normal 273
+	Skin = 2
+	VoicePitch = 82
+End
+
+Normal+Almighty 274
+	Skin = 3
+	VoicePitch = 114
+End
+
+Normal+Power 275
+	Skin = 4
+	VoicePitch = 102
+End
+
+Normal 276
+	Skin = 1
+	VoicePitch = 114
+End
+
+Normal+Punch 277
+	Skin = 3
+	VoicePitch = 108
+End
+
+Normal+Spray 278
+	Skin = 3
+	VoicePitch = 96
+End
+
+Normal 279
+	Skin = 2
+	VoicePitch = 85
+End
+
+Normal 280
+	Skin = 4
+	VoicePitch = 85
+End
+
+Normal+Almighty 281
+	Skin = 1
+	VoicePitch = 90
+End
+
+Normal+Almighty 282
+	Skin = 2
+	VoicePitch = 91
+End
+
+Normal+Boomer 283
+	Skin = 4
+	VoicePitch = 118
+End
+
+Normal 284
+	Skin = 3
+	VoicePitch = 118
+End
+
+Normal+RifleM 285
+	Skin = 2
+	VoicePitch = 84
+End
+
+Normal+Almighty 286
+	Skin = 3
+	VoicePitch = 96
+End
+
+Normal+RifleT 287
+	Skin = 4
+	VoicePitch = 102
+End
+
+Normal+Player3 288
+	Skin = 2
+	VoicePitch = 117
+End
+
+Normal+Eco 289
+	Skin = 1
+	VoicePitch = 111
+End
+
+Normal 290
+	Skin = 3
+	VoicePitch = 115
+End
+
+Normal+Almighty 291
+	Skin = 2
+	VoicePitch = 105
+End
+
+Normal 292
+	Skin = 4
+	VoicePitch = 111
+End
+
+Normal 293
+	Skin = 4
+	VoicePitch = 109
+End
+
+Normal+Almighty 294
+	Skin = 2
+	VoicePitch = 120
+End
+
+Normal+Punch 295
+	Skin = 2
+	VoicePitch = 86
+End
+
+Normal+Almighty 296
+	Skin = 2
+	VoicePitch = 100
+End
+
+Normal 297
+	Skin = 3
+	VoicePitch = 96
+End
+
+Normal+EcoT 298
+	Skin = 1
+	VoicePitch = 111
+End
+
+Normal 299
+	Skin = 4
+	VoicePitch = 103
+End
+
+Normal+HunterT 300
+	Skin = 2
+	VoicePitch = 81
+End
+
+Normal+RifleM 301
+	Skin = 1
+	VoicePitch = 85
+End
+
+Normal+HunterN 302
+	Skin = 1
+	VoicePitch = 97
+End
+
+Normal+Almighty 303
+	Skin = 3
+	VoicePitch = 69
+End
+
+Normal+Almighty 304
+	Skin = 1
+	VoicePitch = 116
+End
+
+Normal 305
+	Skin = 1
+	VoicePitch = 106
+End
+
+Normal 306
+	Skin = 4
+	VoicePitch = 110
+End
+
+Normal+Rifle 307
+	Skin = 2
+	VoicePitch = 91
+End
+
+Normal 308
+	Skin = 1
+	VoicePitch = 102
+End
+
+Normal 309
+	Skin = 3
+	VoicePitch = 89
+End
+
+Normal+Almighty 310
+	Skin = 3
+	VoicePitch = 117
+End
+
+Normal+Almighty 311
+	Skin = 2
+	VoicePitch = 84
+End
+
+Normal+Almighty 312
+	Skin = 2
+	VoicePitch = 104
+End
+
+Normal+Almighty 313
+	Skin = 4
+	VoicePitch = 96
+End
+
+Normal+Almighty 314
+	Skin = 2
+	VoicePitch = 110
+End
+
+Normal+Almighty 315
+	Skin = 4
+	VoicePitch = 95
+End
+
+Normal+Player3 316
+	Skin = 4
+	VoicePitch = 118
+End
+
+Normal+SniperD 317
+	Skin = 1
+	VoicePitch = 108
+End
+
+Normal+Almighty 318
+	Skin = 2
+	VoicePitch = 113
+End
+
+Normal+RifleD 319
+	Skin = 3
+	VoicePitch = 86
+End
+
+Normal+Sniper 320
+	Skin = 4
+	VoicePitch = 91
+End
+
+Normal+Precise 435
+	Skin = 3
+	VoicePitch = 107
+End
+
+Normal+PunchR 436
+	Skin = 2
+	VoicePitch = 111
+End
+
+Normal+Player2 437
+	Skin = 3
+	VoicePitch = 82
+End
+
+Normal 438
+	Skin = 2
+	VoicePitch = 93
+End
+
+Normal+Power 439
+	Skin = 1
+	VoicePitch = 108
+End
+
+Normal+Almighty 440
+	Skin = 4
+	VoicePitch = 107
+End
+
+Normal+EcoT 441
+	Skin = 4
+	VoicePitch = 80
+End
+
+Normal+Almighty 442
+	Skin = 4
+	VoicePitch = 106
+End
+
+Normal+Almighty 443
+	Skin = 1
+	VoicePitch = 94
+End
+
+Normal 444
+	Skin = 2
+	VoicePitch = 115
+End
+
+Normal 445
+	Skin = 3
+	VoicePitch = 113
+End
+
+Normal+Player3 446
+	Skin = 1
+	VoicePitch = 108
+End
+
+Normal+Spray 447
+	Skin = 4
+	VoicePitch = 92
+End
+
+Normal 448
+	Skin = 3
+	VoicePitch = 85
+End
+
+Normal+Rifle 449
+	Skin = 3
+	VoicePitch = 99
+End
+
+Normal+Hunter 450
+	Skin = 2
+	VoicePitch = 91
+End
+
+Normal 451
+	Skin = 3
+	VoicePitch = 95
+End
+
+Normal 452
+	Skin = 2
+	VoicePitch = 111
+End
+
+Normal+Almighty 453
+	Skin = 2
+	VoicePitch = 101
+End
+
+Normal+HunterS 454
+	Skin = 2
+	VoicePitch = 88
+End
+
+Normal 455
+	Skin = 1
+	VoicePitch = 111
+End
+
+Normal+Almighty 456
+	Skin = 2
+	VoicePitch = 96
+End
+
+Normal+Freeman 457
+	Skin = 2
+	VoicePitch = 97
+End
+
+Normal 458
+	Skin = 1
+	VoicePitch = 101
+End
+
+Normal 459
+	Skin = 4
+	VoicePitch = 92
+End
+
+Normal+Rifle 460
+	Skin = 4
+	VoicePitch = 86
+End
+
+Normal+HunterN 461
+	Skin = 1
+	VoicePitch = 80
+End
+
+Normal 462
+	Skin = 3
+	VoicePitch = 80
+End
+
+Normal+HunterT 463
+	Skin = 4
+	VoicePitch = 103
+End
+
+Normal+RifleE 464
+	Skin = 1
+	VoicePitch = 94
+End
+
+Normal+Rifle 703
+	Skin = 1
+	VoicePitch = 105
+End
+
+Normal+PunchT 704
+	Skin = 2
+	VoicePitch = 90
+End
+
+Normal+Player2 705
+	Skin = 3
+	VoicePitch = 100
+End
+
+Normal 706
+	Skin = 4
+	VoicePitch = 107
+End
+
+Normal+SniperD 707
+	Skin = 1
+	VoicePitch = 104
+End
+
+Normal 708
+	Skin = 2
+	VoicePitch = 110
+End
+
+Normal 709
+	Skin = 2
+	VoicePitch = 110
+End
+
+Normal+Player1 710
+	Skin = 3
+	VoicePitch = 95
+End
+
+Normal+Boomer 711
+	Skin = 4
+	VoicePitch = 112
+End
+
+Normal 712
+	Skin = 1
+	VoicePitch = 111
+End
+
+Normal+Freeman 713
+	Skin = 3
+	VoicePitch = 115
+End
+
+Normal+Boomer 714
+	Skin = 4
+	VoicePitch = 112
+End
+
+Normal 715
+	Skin = 1
+	VoicePitch = 96
+End
+
+Normal+Player1 716
+	Skin = 2
+	VoicePitch = 98
+End
+
+Normal+PunchT 717
+	Skin = 4
+	VoicePitch = 110
+End
+
+Normal 718
+	Skin = 1
+	VoicePitch = 95
+End
+
+Normal+Sniper 719
+	Skin = 2
+	VoicePitch = 100
+End
+
+Normal 720
+	Skin = 4
+	VoicePitch = 99
+End
+
+Normal+HunterS 721
+	Skin = 3
+	VoicePitch = 98
+End
+
+Normal 722
+	Skin = 1
+	VoicePitch = 105
+End
+
+Normal 723
+	Skin = 2
+	VoicePitch = 115
+End
+
+Normal+Shooter 724
+	Skin = 3
+	VoicePitch = 110
+End
+
+Normal 725
+	Skin = 4
+	VoicePitch = 92
+End
+
+Normal+HunterT 726
+	Skin = 4
+	VoicePitch = 103
+End
+
+Normal+EcoT 727
+	Skin = 1
+	VoicePitch = 115
+End
+
+Normal+Eco 728
+	Skin = 3
+	VoicePitch = 97
+End
+
+Normal+HunterS 729
+	Skin = 4
+	VoicePitch = 96
+End
+
+Normal 730
+	Skin = 4
+	VoicePitch = 117
+End
+
+Normal+Almighty 731
+	Skin = 3
+	VoicePitch = 93
+End
+
+Normal+EcoD 732
+	Skin = 2
+	VoicePitch = 87
+End
+
+Normal 733
+	Skin = 1
+	VoicePitch = 88
+End
+
+Normal 734
+	Skin = 4
+	VoicePitch = 96
+End
+
+Normal 735
+	Skin = 2
+	VoicePitch = 119
+End
+
+Normal 736
+	Skin = 3
+	VoicePitch = 108
+End
+
+Normal+RifleT 737
+	Skin = 2
+	VoicePitch = 81
+End
+
+Normal+RifleE 738
+	Skin = 3
+	VoicePitch = 98
+End
+
+Normal+RifleE 739
+	Skin = 1
+	VoicePitch = 108
+End
+
+Normal 740
+	Skin = 4
+	VoicePitch = 120
+End
+
+Normal 741
+	Skin = 2
+	VoicePitch = 98
+End
+
+Normal 742
+	Skin = 1
+	VoicePitch = 104
+End
+
+Normal+Freeman 743
+	Skin = 1
+	VoicePitch = 108
+End
+
+Normal+Player3 744
+	Skin = 3
+	VoicePitch = 119
+End
+
+Normal+EcoD 745
+	Skin = 4
+	VoicePitch = 107
+End
+
+Normal+Almighty 746
+	Skin = 3
+	VoicePitch = 120
+End
+
+Normal+Hunter 747
+	Skin = 2
+	VoicePitch = 114
+End
+
+Normal+HunterE 748
+	Skin = 1
+	VoicePitch = 110
+End
+
+Normal+PunchT 749
+	Skin = 2
+	VoicePitch = 113
+End
+
+Normal+PunchD 750
+	Skin = 2
+	VoicePitch = 100
+End
+
+Normal+PunchR 751
+	Skin = 4
+	VoicePitch = 95
+End
+
+Normal 752
+	Skin = 4
+	VoicePitch = 87
+End
+
+Normal 753
+	Skin = 1
+	VoicePitch = 104
+End
+
+Normal+PunchR 754
+	Skin = 3
+	VoicePitch = 84
+End
+
+Normal 755
+	Skin = 3
+	VoicePitch = 119
+End
+
+Normal+PowerS 756
+	Skin = 1
+	VoicePitch = 80
+End
+
+Normal+Almighty 757
+	Skin = 2
+	VoicePitch = 93
+End
+
+Normal+Almighty 758
+	Skin = 4
+	VoicePitch = 98
+End
+
+Normal 759
+	Skin = 2
+	VoicePitch = 82
+End
+
+Normal+Almighty 760
+	Skin = 3
+	VoicePitch = 114
+End
+
+Normal+Power 761
+	Skin = 4
+	VoicePitch = 102
+End
+
+Normal 762
+	Skin = 1
+	VoicePitch = 114
+End
+
+Normal+Punch 763
+	Skin = 3
+	VoicePitch = 108
+End
+
+Normal+Spray 764
+	Skin = 3
+	VoicePitch = 96
+End
+
+Normal 765
+	Skin = 2
+	VoicePitch = 85
+End
+
+Normal 766
+	Skin = 4
+	VoicePitch = 85
+End
+
+Normal+Almighty 767
+	Skin = 1
+	VoicePitch = 90
+End
+
+Normal+Almighty 768
+	Skin = 2
+	VoicePitch = 91
+End
+
+Normal+Boomer 769
+	Skin = 4
+	VoicePitch = 118
+End
+
+Normal 770
+	Skin = 3
+	VoicePitch = 118
+End
+
+Normal+RifleM 771
+	Skin = 2
+	VoicePitch = 84
+End
+
+Normal+Almighty 772
+	Skin = 3
+	VoicePitch = 96
+End
+
+Normal+RifleT 773
+	Skin = 4
+	VoicePitch = 102
+End
+
+Normal+Player3 774
+	Skin = 2
+	VoicePitch = 117
+End
+
+Normal+Eco 775
+	Skin = 1
+	VoicePitch = 111
+End
+
+Normal 776
+	Skin = 3
+	VoicePitch = 115
+End
+
+Normal+Almighty 777
+	Skin = 2
+	VoicePitch = 105
+End
+
+Normal 778
+	Skin = 4
+	VoicePitch = 111
+End
+
+Normal 779
+	Skin = 4
+	VoicePitch = 109
+End
+
+Normal+Almighty 780
+	Skin = 2
+	VoicePitch = 120
+End
+
+Normal+Punch 781
+	Skin = 2
+	VoicePitch = 86
+End
+
+Normal+Almighty 782
+	Skin = 2
+	VoicePitch = 100
+End
+
+Normal 783
+	Skin = 3
+	VoicePitch = 96
+End
+
+Normal+EcoT 784
+	Skin = 1
+	VoicePitch = 111
+End
+
+Normal 785
+	Skin = 4
+	VoicePitch = 103
+End
+
+Normal+HunterT 786
+	Skin = 2
+	VoicePitch = 81
+End
+
+Normal+RifleM 787
+	Skin = 1
+	VoicePitch = 85
+End
+
+Normal+HunterN 788
+	Skin = 1
+	VoicePitch = 97
+End
+
+Normal+Almighty 789
+	Skin = 3
+	VoicePitch = 69
+End
+
+Normal+Almighty 790
+	Skin = 1
+	VoicePitch = 116
+End
+
+Normal 791
+	Skin = 1
+	VoicePitch = 106
+End
+
+Normal 792
+	Skin = 4
+	VoicePitch = 110
+End
+
+Normal+Rifle 793
+	Skin = 2
+	VoicePitch = 91
+End
+
+Normal 794
+	Skin = 1
+	VoicePitch = 102
+End
+
+Normal 795
+	Skin = 3
+	VoicePitch = 89
+End
+
+Normal+Almighty 796
+	Skin = 3
+	VoicePitch = 117
+End
+
+Normal+Almighty 797
+	Skin = 2
+	VoicePitch = 84
+End
+
+Normal+Almighty 798
+	Skin = 2
+	VoicePitch = 104
+End
+
+Normal+Almighty 799
+	Skin = 4
+	VoicePitch = 96
+End
+
+Normal+Almighty 800
+	Skin = 2
+	VoicePitch = 110
+End
+
+Normal+Almighty 801
+	Skin = 4
+	VoicePitch = 95
+End
+
+Normal+Player3 802
+	Skin = 4
+	VoicePitch = 118
+End
+
+Normal+SniperD 803
+	Skin = 1
+	VoicePitch = 108
+End
+
+Normal+Almighty 804
+	Skin = 2
+	VoicePitch = 113
+End
+
+Normal+RifleD 805
+	Skin = 3
+	VoicePitch = 86
+End
+
+Normal+Sniper 806
+	Skin = 4
+	VoicePitch = 91
+End
+
+Normal+Precise 807
+	Skin = 3
+	VoicePitch = 107
+End
+
+Normal+PunchR 808
+	Skin = 2
+	VoicePitch = 111
+End
+
+Normal+Player2 809
+	Skin = 3
+	VoicePitch = 82
+End
+
+Normal 810
+	Skin = 2
+	VoicePitch = 93
+End
+
+Normal+Power 811
+	Skin = 1
+	VoicePitch = 108
+End
+
+Normal+Almighty 812
+	Skin = 4
+	VoicePitch = 107
+End
+
+Normal+EcoT 813
+	Skin = 4
+	VoicePitch = 80
+End
+
+Normal+Almighty 814
+	Skin = 4
+	VoicePitch = 106
+End
+
+Normal+Almighty 815
+	Skin = 1
+	VoicePitch = 94
+End
+
+Normal 816
+	Skin = 2
+	VoicePitch = 115
+End
+
+Normal 817
+	Skin = 3
+	VoicePitch = 113
+End
+
+Normal+Player3 818
+	Skin = 1
+	VoicePitch = 108
+End
+
+Normal+Spray 819
+	Skin = 4
+	VoicePitch = 92
+End
+
+Normal 820
+	Skin = 3
+	VoicePitch = 85
+End
+
+Normal+Rifle 821
+	Skin = 3
+	VoicePitch = 99
+End
+
+Normal+Hunter 822
+	Skin = 2
+	VoicePitch = 91
+End
+
+Normal 823
+	Skin = 3
+	VoicePitch = 95
+End
+
+Normal 824
+	Skin = 2
+	VoicePitch = 111
+End
+
+Normal+Almighty 825
+	Skin = 2
+	VoicePitch = 101
+End
+
+Normal+HunterS 826
+	Skin = 2
+	VoicePitch = 88
+End
+
+Normal 827
+	Skin = 1
+	VoicePitch = 111
+End
+
+Normal+Almighty 828
+	Skin = 2
+	VoicePitch = 96
+End
+
+Normal+Freeman 829
+	Skin = 2
+	VoicePitch = 97
+End
+
+Normal 830
+	Skin = 1
+	VoicePitch = 101
+End
+
+Normal 831
+	Skin = 4
+	VoicePitch = 92
+End
+
+Normal+Rifle 832
+	Skin = 4
+	VoicePitch = 86
+End
+
+Normal+HunterN 833
+	Skin = 1
+	VoicePitch = 80
+End
+
+Normal 834
+	Skin = 3
+	VoicePitch = 80
+End
+
+Normal+HunterT 835
+	Skin = 4
+	VoicePitch = 103
+End
+
+Normal+RifleE 836
+	Skin = 1
+	VoicePitch = 94
+End
+
+Normal+Rusher 1017
+	Skin = 1
+	VoicePitch = 89
+End
+
+Normal+Autosniper 1018
+	Skin = 3
+	VoicePitch = 80
+End
+
+Normal+Almighty 1019
+	Skin = 2
+	VoicePitch = 84
+End
+
+Normal+Tank 1020
+	Skin = 1
+	VoicePitch = 86
+End
+
+Normal+Autosniper 1021
+	Skin = 3
+	VoicePitch = 82
+End
+
+Normal 1022
+	Skin = 2
+	VoicePitch = 69
+End
+
+Normal+Noober 1023
+	Skin = 4
+	VoicePitch = 94
+End
+
+Normal+PunchT 1024
+	Skin = 4
+	VoicePitch = 94
+End
+
+Normal+Tank 1025
+	Skin = 4
+	VoicePitch = 90
+End
+
+Normal+Noober 1026
+	Skin = 2
+	VoicePitch = 95
+End
+
+Normal+Noober 1027
+	Skin = 3
+	VoicePitch = 80
+End
+
+//----------------------------------------
+
+Fair+EcoT 067
+	VoicePitch = 110
+End
+
+Fair 068
+	VoicePitch = 100
+End
+
+Fair+HunterS 069
+	VoicePitch = 99
+End
+
+Fair 070
+	VoicePitch = 120
+End
+
+Fair 071
+	VoicePitch = 111
+End
+
+Fair+RifleD 072
+	VoicePitch = 98
+End
+
+Fair+HunterE 073
+	VoicePitch = 112
+End
+
+Fair+Precise 074
+	VoicePitch = 90
+End
+
+Fair+Shooter 075
+	VoicePitch = 120
+End
+
+Fair+Punch 076
+	VoicePitch = 118
+End
+
+Fair+PowerS 077
+	VoicePitch = 116
+End
+
+Fair 078
+	VoicePitch = 112
+End
+
+Fair+PunchT 079
+	VoicePitch = 114
+End
+
+Fair 080
+	VoicePitch = 110
+End
+
+Fair+Freeman 081
+	VoicePitch = 98
+End
+
+Fair+EcoT 082
+	VoicePitch = 92
+End
+
+Fair 083
+	VoicePitch = 113
+End
+
+Fair+PunchT 084
+	VoicePitch = 114
+End
+
+Fair 085
+	VoicePitch = 115
+End
+
+Fair 086
+	VoicePitch = 100
+End
+
+Fair+PowerS 087
+	VoicePitch = 102
+End
+
+Fair 088
+	VoicePitch = 98
+End
+
+Fair 089
+	VoicePitch = 96
+End
+
+Fair+PunchT 090
+	VoicePitch = 94
+End
+
+Fair+SniperD 140
+	VoicePitch = 92
+End
+
+Fair 321
+	VoicePitch = 102
+End
+
+Fair 322
+	VoicePitch = 114
+End
+
+Fair+HunterT 323
+	VoicePitch = 87
+End
+
+Fair 324
+	VoicePitch = 61
+End
+
+Fair+Almighty 325
+	VoicePitch = 78
+End
+
+Fair+Power 326
+	VoicePitch = 114
+End
+
+Fair+EcoD 327
+	VoicePitch = 64
+End
+
+Fair 328
+	VoicePitch = 105
+End
+
+Fair 329
+	VoicePitch = 75
+End
+
+Fair 330
+	VoicePitch = 110
+End
+
+Fair+PunchT 331
+	VoicePitch = 84
+End
+
+Fair 332
+	VoicePitch = 102
+End
+
+Fair+EcoT 333
+	VoicePitch = 97
+End
+
+Fair+Player1 334
+	VoicePitch = 101
+End
+
+Fair 335
+	VoicePitch = 75
+End
+
+Fair+Player3 336
+	VoicePitch = 107
+End
+
+Fair+Eco 337
+	VoicePitch = 97
+End
+
+Fair+EcoT 338
+	VoicePitch = 70
+End
+
+Fair+RifleT 339
+	VoicePitch = 111
+End
+
+Fair+Shooter 340
+	VoicePitch = 112
+End
+
+Fair+Almighty 341
+	VoicePitch = 81
+End
+
+Fair+Almighty 342
+	VoicePitch = 114
+End
+
+Fair+PunchR 343
+	VoicePitch = 73
+End
+
+Fair+RifleE 344
+	VoicePitch = 108
+End
+
+Fair+EcoT 345
+	VoicePitch = 76
+End
+
+Fair+SniperD 346
+	VoicePitch = 116
+End
+
+Fair 347
+	VoicePitch = 64
+End
+
+Fair+PunchR 348
+	VoicePitch = 117
+End
+
+Fair+Hunter 349
+	VoicePitch = 94
+End
+
+Fair+Shotgun 350
+	VoicePitch = 113
+End
+
+Fair+Freeman 351
+	VoicePitch = 66
+End
+
+Fair 352
+	VoicePitch = 115
+End
+
+Fair+Rifle 353
+	VoicePitch = 90
+End
+
+Fair+Sniper 354
+	VoicePitch = 88
+End
+
+Fair+RifleT 355
+	VoicePitch = 73
+End
+
+Fair 465
+	VoicePitch = 92
+End
+
+Fair+RifleT 466
+	VoicePitch = 111
+End
+
+Fair 467
+	VoicePitch = 119
+End
+
+Fair 468
+	VoicePitch = 85
+End
+
+Fair+Almighty 469
+	VoicePitch = 104
+End
+
+Fair+HunterT 470
+	VoicePitch = 119
+End
+
+Fair+Almighty 471
+	VoicePitch = 83
+End
+
+Fair+Sniper 472
+	VoicePitch = 108
+End
+
+Fair 473
+	VoicePitch = 109
+End
+
+Fair+PunchT 474
+	VoicePitch = 107
+End
+
+Fair+Player3 475
+	VoicePitch = 110
+End
+
+Fair 476
+	VoicePitch = 101
+End
+
+Fair+Almighty 477
+	VoicePitch = 119
+End
+
+Fair 478
+	VoicePitch = 96
+End
+
+Fair 479
+	VoicePitch = 81
+End
+
+Fair+Eco 480
+	VoicePitch = 85
+End
+
+Fair+HunterE 481
+	VoicePitch = 90
+End
+
+Fair 482
+	VoicePitch = 114
+End
+
+Fair+Shotgun 483
+	VoicePitch = 113
+End
+
+Fair+Almighty 484
+	VoicePitch = 109
+End
+
+Fair 485
+	VoicePitch = 98
+End
+
+Fair+EcoT 486
+	VoicePitch = 106
+End
+
+Fair+Rifle 487
+	VoicePitch = 93
+End
+
+Fair 488
+	VoicePitch = 119
+End
+
+Fair+EcoT 837
+	VoicePitch = 110
+End
+
+Fair 838
+	VoicePitch = 100
+End
+
+Fair+HunterS 839
+	VoicePitch = 99
+End
+
+Fair 840
+	VoicePitch = 120
+End
+
+Fair 841
+	VoicePitch = 111
+End
+
+Fair+RifleD 842
+	VoicePitch = 98
+End
+
+Fair+HunterE 843
+	VoicePitch = 112
+End
+
+Fair+Precise 844
+	VoicePitch = 90
+End
+
+Fair+Shooter 845
+	VoicePitch = 120
+End
+
+Fair+Punch 846
+	VoicePitch = 118
+End
+
+Fair+PowerS 847
+	VoicePitch = 116
+End
+
+Fair 848
+	VoicePitch = 112
+End
+
+Fair+PunchT 849
+	VoicePitch = 114
+End
+
+Fair+Boomer 850
+	VoicePitch = 110
+End
+
+Fair+Freeman 851
+	VoicePitch = 98
+End
+
+Fair+EcoT 852
+	VoicePitch = 92
+End
+
+Fair 853
+	VoicePitch = 113
+End
+
+Fair+PunchT 854
+	VoicePitch = 114
+End
+
+Fair 855
+	VoicePitch = 115
+End
+
+Fair 856
+	VoicePitch = 100
+End
+
+Fair+PowerS 857
+	VoicePitch = 102
+End
+
+Fair 858
+	VoicePitch = 98
+End
+
+Fair 859
+	VoicePitch = 96
+End
+
+Fair+PunchT 860
+	VoicePitch = 94
+End
+
+Fair+SniperD 861
+	VoicePitch = 92
+End
+
+Fair 862
+	VoicePitch = 102
+End
+
+Fair 863
+	VoicePitch = 114
+End
+
+Fair+HunterT 864
+	VoicePitch = 87
+End
+
+Fair 865
+	VoicePitch = 61
+End
+
+Fair+Almighty 866
+	VoicePitch = 78
+End
+
+Fair+Power 867
+	VoicePitch = 114
+End
+
+Fair+EcoD 868
+	VoicePitch = 64
+End
+
+Fair 869
+	VoicePitch = 105
+End
+
+Fair+RifleD 870
+	VoicePitch = 75
+End
+
+Fair 871
+	VoicePitch = 110
+End
+
+Fair+PunchT 872
+	VoicePitch = 84
+End
+
+Fair 873
+	VoicePitch = 102
+End
+
+Fair+EcoT 874
+	VoicePitch = 97
+End
+
+Fair+Player1 875
+	VoicePitch = 101
+End
+
+Fair 876
+	VoicePitch = 75
+End
+
+Fair+Player3 877
+	VoicePitch = 107
+End
+
+Fair+Eco 878
+	VoicePitch = 97
+End
+
+Fair+EcoD 879
+	VoicePitch = 70
+End
+
+Fair+RifleT 880
+	VoicePitch = 111
+End
+
+Fair+Shooter 881
+	VoicePitch = 112
+End
+
+Fair+Almighty 882
+	VoicePitch = 81
+End
+
+Fair+Autosniper 883
+	VoicePitch = 114
+End
+
+Fair+PunchR 884
+	VoicePitch = 73
+End
+
+Fair+RifleE 885
+	VoicePitch = 108
+End
+
+Fair+EcoT 886
+	VoicePitch = 76
+End
+
+Fair+SniperD 887
+	VoicePitch = 116
+End
+
+Fair 888
+	VoicePitch = 64
+End
+
+Fair+PunchR 889
+	VoicePitch = 117
+End
+
+Fair+Hunter 890
+	VoicePitch = 94
+End
+
+Fair+Shotgun 891
+	VoicePitch = 113
+End
+
+Fair+Freeman 892
+	VoicePitch = 66
+End
+
+Fair 893
+	VoicePitch = 115
+End
+
+Fair+Rifle 894
+	VoicePitch = 90
+End
+
+Fair+Sniper 895
+	VoicePitch = 88
+End
+
+Fair+RifleT 896
+	VoicePitch = 73
+End
+
+Fair 897
+	VoicePitch = 92
+End
+
+Fair+RifleT 898
+	VoicePitch = 111
+End
+
+Fair 899
+	VoicePitch = 119
+End
+
+Fair 900
+	VoicePitch = 85
+End
+
+Fair+Almighty 901
+	VoicePitch = 104
+End
+
+Fair+HunterT 902
+	VoicePitch = 119
+End
+
+Fair+Almighty 903
+	VoicePitch = 83
+End
+
+Fair+Sniper 904
+	VoicePitch = 108
+End
+
+Fair 905
+	VoicePitch = 109
+End
+
+Fair+PunchT 906
+	VoicePitch = 107
+End
+
+Fair+Player3 907
+	VoicePitch = 110
+End
+
+Fair 908
+	VoicePitch = 101
+End
+
+Fair+Almighty 909
+	VoicePitch = 119
+End
+
+Fair 910
+	VoicePitch = 96
+End
+
+Fair 911
+	VoicePitch = 81
+End
+
+Fair+Eco 912
+	VoicePitch = 85
+End
+
+Fair+HunterE 913
+	VoicePitch = 90
+End
+
+Fair 914
+	VoicePitch = 114
+End
+
+Fair+Shotgun 915
+	VoicePitch = 113
+End
+
+Fair+Almighty 916
+	VoicePitch = 109
+End
+
+Fair 917
+	VoicePitch = 98
+End
+
+Fair+EcoT 918
+	VoicePitch = 106
+End
+
+Fair+Rifle 919
+	VoicePitch = 93
+End
+
+Fair 920
+	VoicePitch = 119
+End
+
+Fair 1028
+	VoicePitch = 114
+End
+
+Fair+Rusher 1029
+	VoicePitch = 113
+End
+
+Fair+Noober 1030
+	VoicePitch = 109
+End
+
+Fair 1031
+	VoicePitch = 98
+End
+
+Fair+Tank 1032
+	VoicePitch = 106
+End
+
+Fair+Autosniper 1033
+	VoicePitch = 93
+End
+
+Fair+Almighty 1034
+	VoicePitch = 119
+End
+
+//----------------------------------------
+
+Easy+RifleD 091
+	VoicePitch = 100
+End
+
+Easy 092
+	VoicePitch = 110
+End
+
+Easy+HunterT 093
+	VoicePitch = 120
+End
+
+Easy 094
+	VoicePitch = 99
+End
+
+Easy 095
+	VoicePitch = 120
+End
+
+Easy+SniperD 096
+	VoicePitch = 125
+End
+
+Easy 097
+	VoicePitch = 110
+End
+
+Easy 098
+	VoicePitch = 100
+End
+
+Easy 099
+	VoicePitch = 112
+End
+
+Easy 100
+	VoicePitch = 121
+End
+
+Easy+EcoT 101
+	VoicePitch = 99
+End
+
+Easy+RifleE 102
+	VoicePitch = 119
+End
+
+Easy+HunterE 103
+	VoicePitch = 118
+End
+
+Easy 104
+	VoicePitch = 117
+End
+
+Easy+Spray 105
+	VoicePitch = 116
+End
+
+Easy+Rifle 106
+	VoicePitch = 115
+End
+
+Easy+Power 107
+	VoicePitch = 114
+End
+
+Easy+Boomer 108
+	VoicePitch = 112
+End
+
+Easy 109
+	VoicePitch = 111
+End
+
+Easy 110
+	VoicePitch = 105
+End
+
+Easy+PunchT 111
+	VoicePitch = 110
+End
+
+Easy+Hunter 112
+	VoicePitch = 109
+End
+
+Easy+RifleT 113
+	VoicePitch = 108
+End
+
+Easy+HunterS 114
+	VoicePitch = 122
+End
+
+Easy 115
+	VoicePitch = 120
+End
+
+Easy+Punch 116
+	VoicePitch = 125
+End
+
+Easy 117
+	VoicePitch = 95
+End
+
+Easy 118
+	VoicePitch = 92
+End
+
+Easy 119
+	VoicePitch = 100
+End
+
+Easy+Eco 120
+	VoicePitch = 102
+End
+
+Easy 121
+	VoicePitch = 104
+End
+
+Easy+RifleD 122
+	VoicePitch = 108
+End
+
+Easy+Shooter 123
+	VoicePitch = 95
+End
+
+Easy 124
+	VoicePitch = 100
+End
+
+Easy+Player3 125
+	VoicePitch = 120
+End
+
+Easy 126
+	VoicePitch = 112
+End
+
+Easy 127
+	VoicePitch = 99
+End
+
+Easy+Freeman 128
+	VoicePitch = 110
+End
+
+Easy+Punch 129
+	VoicePitch = 98
+End
+
+Easy+EcoD 131
+	VoicePitch = 113
+End
+
+Easy+PunchT 132
+	VoicePitch = 89
+End
+
+Easy 133
+	VoicePitch = 96
+End
+
+Easy+RifleM 134
+	VoicePitch = 105
+End
+
+Easy+Spray 356
+	VoicePitch = 74
+End
+
+Easy 357
+	VoicePitch = 101
+End
+
+Easy 358
+	VoicePitch = 72
+End
+
+Easy+Hunter 359
+	VoicePitch = 87
+End
+
+Easy+HunterT 360
+	VoicePitch = 116
+End
+
+Easy+RifleE 361
+	VoicePitch = 97
+End
+
+Easy+EcoT 362
+	VoicePitch = 78
+End
+
+Easy+Eco 363
+	VoicePitch = 107
+End
+
+Easy 364
+	VoicePitch = 73
+End
+
+Easy+Player3 365
+	VoicePitch = 70
+End
+
+Easy+EcoT 366
+	VoicePitch = 107
+End
+
+Easy+Noober 367
+	VoicePitch = 72
+End
+
+Easy+Shotgun 368
+	VoicePitch = 81
+End
+
+Easy+PunchR 369
+	VoicePitch = 69
+End
+
+Easy 370
+	VoicePitch = 111
+End
+
+Easy 371
+	VoicePitch = 114
+End
+
+Easy+Almighty 372
+	VoicePitch = 99
+End
+
+Easy+PunchT 373
+	VoicePitch = 106
+End
+
+Easy 374
+	VoicePitch = 97
+End
+
+Easy 375
+	VoicePitch = 115
+End
+
+Easy+Rusher 376
+	VoicePitch = 67
+End
+
+Easy+Power 377
+	VoicePitch = 79
+End
+
+Easy+Rifle 378
+	VoicePitch = 91
+End
+
+Easy+Autosniper 379
+	VoicePitch = 103
+End
+
+Easy 380
+	VoicePitch = 81
+End
+
+Easy+Shooter 489
+	VoicePitch = 114
+End
+
+Easy+Almighty 490
+	VoicePitch = 112
+End
+
+Easy 491
+	VoicePitch = 88
+End
+
+Easy+EcoD 492
+	VoicePitch = 117
+End
+
+Easy 493
+	VoicePitch = 99
+End
+
+Easy+Tank 494
+	VoicePitch = 95
+End
+
+Easy 495
+	VoicePitch = 105
+End
+
+Easy+RifleD 496
+	VoicePitch = 99
+End
+
+Easy 497
+	VoicePitch = 120
+End
+
+Easy+PunchT 498
+	VoicePitch = 119
+End
+
+Easy+Almighty 499
+	VoicePitch = 117
+End
+
+Easy 500
+	VoicePitch = 109
+End
+
+Easy+RifleD 921
+	VoicePitch = 100
+End
+
+Easy 922
+	VoicePitch = 110
+End
+
+Easy+HunterT 923
+	VoicePitch = 120
+End
+
+Easy 924
+	VoicePitch = 99
+End
+
+Easy 925
+	VoicePitch = 120
+End
+
+Easy+SniperD 926
+	VoicePitch = 125
+End
+
+Easy 927
+	VoicePitch = 110
+End
+
+Easy+Tank 928
+	VoicePitch = 100
+End
+
+Easy 929
+	VoicePitch = 112
+End
+
+Easy 930
+	VoicePitch = 121
+End
+
+Easy+EcoT 931
+	VoicePitch = 99
+End
+
+Easy+RifleE 932
+	VoicePitch = 119
+End
+
+Easy+HunterE 933
+	VoicePitch = 118
+End
+
+Easy 934
+	VoicePitch = 117
+End
+
+Easy+Spray 935
+	VoicePitch = 116
+End
+
+Easy+Rifle 936
+	VoicePitch = 115
+End
+
+Easy+Power 937
+	VoicePitch = 114
+End
+
+Easy+Boomer 938
+	VoicePitch = 112
+End
+
+Easy 939
+	VoicePitch = 111
+End
+
+Easy 940
+	VoicePitch = 105
+End
+
+Easy+PunchT 941
+	VoicePitch = 110
+End
+
+Easy+Hunter 942
+	VoicePitch = 109
+End
+
+Easy+RifleT 943
+	VoicePitch = 108
+End
+
+Easy+HunterS 944
+	VoicePitch = 122
+End
+
+Easy 945
+	VoicePitch = 120
+End
+
+Easy+Punch 946
+	VoicePitch = 125
+End
+
+Easy+Rusher 947
+	VoicePitch = 95
+End
+
+Easy+Autosniper 948
+	VoicePitch = 92
+End
+
+Easy 949
+	VoicePitch = 100
+End
+
+Easy+Eco 950
+	VoicePitch = 102
+End
+
+Easy 951
+	VoicePitch = 104
+End
+
+Easy+Rusher 952
+	VoicePitch = 108
+End
+
+Easy+Autosniper 953
+	VoicePitch = 95
+End
+
+Easy+Rusher 954
+	VoicePitch = 100
+End
+
+Easy+Player3 955
+	VoicePitch = 120
+End
+
+Easy 956
+	VoicePitch = 112
+End
+
+Easy 957
+	VoicePitch = 99
+End
+
+Easy+Freeman 958
+	VoicePitch = 110
+End
+
+Easy+Punch 959
+	VoicePitch = 98
+End
+
+Easy+EcoD 960
+	VoicePitch = 113
+End
+
+Easy+PunchT 961
+	VoicePitch = 89
+End
+
+Easy 962
+	VoicePitch = 96
+End
+
+Easy+RifleM 963
+	VoicePitch = 105
+End
+
+Easy+Autosniper 964
+	VoicePitch = 74
+End
+
+Easy+Noober 965
+	VoicePitch = 101
+End
+
+Easy 966
+	VoicePitch = 72
+End
+
+Easy+Hunter 967
+	VoicePitch = 87
+End
+
+Easy+HunterT 968
+	VoicePitch = 116
+End
+
+Easy+RifleE 969
+	VoicePitch = 97
+End
+
+Easy+EcoT 970
+	VoicePitch = 78
+End
+
+Easy+Eco 971
+	VoicePitch = 107
+End
+
+Easy 972
+	VoicePitch = 73
+End
+
+Easy+Player3 973
+	VoicePitch = 70
+End
+
+Easy+EcoT 974
+	VoicePitch = 107
+End
+
+Easy 975
+	VoicePitch = 72
+End
+
+Easy+Shotgun 976
+	VoicePitch = 81
+End
+
+Easy+PunchR 977
+	VoicePitch = 69
+End
+
+Easy 978
+	VoicePitch = 111
+End
+
+Easy 979
+	VoicePitch = 114
+End
+
+Easy+Almighty 980
+	VoicePitch = 99
+End
+
+Easy+PunchT 981
+	VoicePitch = 106
+End
+
+Easy+Noober 982
+	VoicePitch = 97
+End
+
+Easy+Noober 983
+	VoicePitch = 115
+End
+
+Easy 984
+	VoicePitch = 67
+End
+
+Easy+Power 985
+	VoicePitch = 79
+End
+
+Easy+Rifle 986
+	VoicePitch = 91
+End
+
+Easy+Player3 987
+	VoicePitch = 103
+End
+
+Easy 988
+	VoicePitch = 81
+End
+
+Easy+Shooter 989
+	VoicePitch = 114
+End
+
+Easy+Almighty 990
+	VoicePitch = 112
+End
+
+Easy 991
+	VoicePitch = 88
+End
+
+Easy+EcoD 992
+	VoicePitch = 117
+End
+
+Easy 993
+	VoicePitch = 99
+End
+
+Easy 994
+	VoicePitch = 95
+End
+
+Easy 995
+	VoicePitch = 105
+End
+
+Easy+RifleD 996
+	VoicePitch = 99
+End
+
+Easy 997
+	VoicePitch = 120
+End
+
+Easy+PunchT 998
+	VoicePitch = 119
+End
+
+Easy+Almighty 999
+	VoicePitch = 117
+End
+
+Easy+Almighty 1041
+	VoicePitch = 100
+End
+
+Easy+Tank 1035
+	VoicePitch = 85
+End
+
+Easy+Autosniper 1036
+	VoicePitch = 95
+End
+
+Easy+Tank 1037
+	VoicePitch = 112
+End
+
+Easy 1038
+	VoicePitch = 83
+End
+
+Easy+Almighty 1039
+	VoicePitch = 120
+End
+
+Easy+Rusher 1040
+	VoicePitch = 111
+End
