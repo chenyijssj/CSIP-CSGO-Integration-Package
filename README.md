@@ -77,4 +77,4 @@
 
 解决方法：验证游戏完整性，使用插件时不要替换scripts/ai/deathmatch中的文件。
 
-> ##### 下载链接失效请及时联系我：chenyijssj@outlook.com
+> ##### 下载链接失效请及时联系我：chenyijssj@qq.com
