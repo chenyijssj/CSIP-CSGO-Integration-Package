@@ -49,6 +49,8 @@
 
 [123盘副链接](https://www.123912.com/s/pXHdjv-Av2d3)
 
+[GitHub发布页](https://github.com/chenyijssj/LCSIP-Lejian-CSGO-Integration-Package/releases/tag/LCSIP)
+
 [Gitee发布页](https://gitee.com/chenyijssj/LCSIP-Lejian-CSGO-Integration-Package/releases)
 
 ### 【安装】
