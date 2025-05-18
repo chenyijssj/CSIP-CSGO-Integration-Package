@@ -45,12 +45,11 @@
 
 ### 【下载】
 
-[123盘主链接]()
+[123盘主链接](https://www.123684.com/s/pXHdjv-Av2d3)
 
-[123盘副链接]()
+[123盘副链接](https://www.123912.com/s/pXHdjv-Av2d3)
 
-[蓝凑云]()
-
+[Gitee发布页](https://gitee.com/chenyijssj/LCSIP-Lejian-CSGO-Integration-Package/releases)
 
 ### 【安装】
 
